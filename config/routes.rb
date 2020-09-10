@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     post "sign_in" => "devise/sessions#create"
     delete "sign_out" => "devise/sessions#destroy"
   end
+
+  resources :categories
 end

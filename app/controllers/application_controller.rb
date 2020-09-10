@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
     before_action :configure_permitted_parameters, if: :devise_controller?
 
+    include SessionsHelper
+
   	protected
 
  	def configure_permitted_parameters
