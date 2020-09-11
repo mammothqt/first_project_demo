@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+	<aside class="span4">
+		<section>
+			<h1>
+				<%= @course.name %>
+			</h1>
+			<h2>
+				<%= @course.description %>
+			</h2>
+		</section>
+	</aside>
+	<!-- <div class="span8">
+		<% if @category.courses.any? %>
+			<h3> <%= @category.courses.count %> Courses </h3>
+			<ol class="courses">
+			</ol>
+		<% end %>
+	</div> -->
+</div>
+
+<%= link_to "Back", category_courses_path(@category) %> |
