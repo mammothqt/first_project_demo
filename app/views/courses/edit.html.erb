@@ -1,0 +1,6 @@
+<h1><%= "Edit" %></h1>
+
+<%= render 'form', category: @category, course: @course %>
+
+<%= link_to "Course", category_course_path(@category, @course) %> |
+<%= link_to "Back", category_courses_path(@category) %>
