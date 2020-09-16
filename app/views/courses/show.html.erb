@@ -11,13 +11,16 @@
 			</h2>
 		</section>
 	</aside>
-	<!-- <div class="span8">
-		<% if @category.courses.any? %>
-			<h3> <%= @category.courses.count %> Courses </h3>
+	<div class="span8">
+		<% if @course.word_lists.any? %>
+			<h3> <%= @course.word_lists.count %> Words </h3>
 			<ol class="courses">
+				<%= render @course.word_lists %>
 			</ol>
 		<% end %>
-	</div> -->
+	</div>
 </div>
 
 <%= link_to "Back", category_courses_path(@category) %> |
+<%= link_to "Edit Course", edit_category_course_path(@category, @course) %> |
+<%= link_to "Create new word", new_course_word_list_path(@course) %>

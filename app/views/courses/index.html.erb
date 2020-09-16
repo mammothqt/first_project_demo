@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= "Categories" %></h1>
+<h1><%= @category.name %></h1>
 <h2><%= "Courses" %></h2>
 
 <table>
@@ -15,10 +15,8 @@
   <tbody>
     <% @courses.each do |course| %>
       <tr>
-        <td><%= course.name %></td>
+        <td><%= link_to course.name, category_course_path(@category, course) %></td>
         <td><%= course.description %></td>
-        <td><%= link_to "Show", category_course_path(@category, course) %></td>
-        <td><%= link_to "Edit", edit_category_course_path(@category, course) %></td>
         <td><%= link_to "Delete", category_course_path(@category, course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -27,5 +25,6 @@
 
 <br>
 
-<%= link_to "New", new_category_course_path(@category) %>
-<%= link_to "Back", categories_path %>
+<%= link_to "Back", categories_path %> |
+<%= link_to "Edit Category", edit_category_path(@category) %> |
+<%= link_to "New Course", new_category_course_path(@category) %>
