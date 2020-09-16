@@ -1,6 +1,8 @@
 <li>
 	<h4>
-		<span class="name"><%= course.name %></span>
+		<span class="name">
+			<%= link_to course.name, category_course_path(@category, course) %>
+		</span>
 		<%= link_to "delete", category_course_path(@category, course), method: :delete,
 										confirm: "You sure?" %>
 	</h4>

@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
-	before_action :set_category
-	before_action :set_course, only: [:show, :edit, :update, :destroy]
+	before_action :set_category, only: [:new, :index, :update, :destroy, :create, :edit]
+	before_action :set_course, only: [:edit, :update, :destroy]
 
 	def new
 		@course = Course.new
@@ -10,12 +10,20 @@ class CoursesController < ApplicationController
 		@courses = @category.courses.all
 	end
 
-	def show; end
+	def show
+		if params[:category_id]
+			set_category
+			set_course
+		else
+			@course = Course.find_by_id params[:id]
+			@category = @course.category
+		end
+	end
 
 	def create
-		@course = @category.courses.create! course_params
+		@course = @category.courses.create course_params
 
-		if @course.save!
+		if @course.save
 			flash[:success] = "Course has been created!"
 			redirect_to category_course_path(@category, @course)
 		else

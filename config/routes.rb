@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   resources :categories do
     resources :courses
   end
+
+  resources :courses do
+    resources :word_lists
+  end
 end

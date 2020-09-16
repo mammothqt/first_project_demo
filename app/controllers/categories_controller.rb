@@ -17,7 +17,7 @@ class CategoriesController < ApplicationController
 
 		if @category.save
 			flash[:success] = "Category created!"
-			redirect_to category_path @category
+			redirect_to category_courses_path @category
 		else
 			render new_category_path
 		end
@@ -26,7 +26,7 @@ class CategoriesController < ApplicationController
 	def update
 		if @category.update!(category_params)
 			flash[:success] = "Category has been updated"
-			redirect_to category_path @category
+			redirect_to category_courses_path @category
 		else
 			render edit_category_path @category
 		end
