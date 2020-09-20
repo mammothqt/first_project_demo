@@ -1,7 +1,9 @@
 class Question < ApplicationRecord
 	belongs_to :test
-	has_many :answers
+	has_many :answers, dependent: :destroy
 
-	validates :test_id, presence: true
+	accepts_nested_attributes_for :answers
+
+	# validates :test_id, presence: true
 	validates :content, length: { maximum: 150 }, presence: true
 end

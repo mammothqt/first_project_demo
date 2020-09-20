@@ -24,6 +24,7 @@ gem 'bootstrap-will_paginate'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'rails-i18n'
+gem 'actionview', '>= 6.0.3.3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

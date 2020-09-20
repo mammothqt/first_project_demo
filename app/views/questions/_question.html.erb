@@ -1,0 +1,10 @@
+<h3>
+	<li><%= question.content %></li>
+</h3>
+<ol class = "answer">
+	<% question.answers.each do |answer| %>
+		<li class = "correct">
+			<%= answer.content %>
+		</li>
+	<% end %>
+</ol>
