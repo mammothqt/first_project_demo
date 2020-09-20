@@ -1,0 +1,8 @@
+<div class="field">
+  <%= f.label :content, "Question content" %>
+  <%= f.text_area :content %>
+</div>
+
+<%= f.fields_for :answers do |u| %>
+	<%= render "answer", u: u %>
+<% end %>

@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   resources :courses do
     resources :word_lists
   end
+
+  resources :tests do
+    resources :questions
+  end
 end

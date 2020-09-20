@@ -36,7 +36,7 @@ class CoursesController < ApplicationController
 			flash[:success] = "Course has been updated"
 			redirect_to category_course_path(@category, @course)
 		else
-			render edit_category_course_path(@category, @course)
+			render "edit"
 		end
 	end
 

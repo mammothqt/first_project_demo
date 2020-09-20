@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+	<aside class="span4">
+		<section>
+			<h1>
+				<%= "Test: "%>
+				<%= @test.name %>
+			</h1>
+			<%= @test.description %>
+		</section>
+	</aside>
+	<div class="span8">
+		<% @test.questions.each do |question| %>
+			<ol class="question">
+				<%= render question %>
+			</ol>
+		<% end %>
+	</div>
+</div>
+
+<%= link_to "Back", tests_path %> |
+<%= link_to "Edit Test", edit_test_path(@test) %>
