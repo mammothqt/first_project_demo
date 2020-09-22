@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+	<aside class="span4">
+		<section>
+			<h1>
+				<%= "Name: " %>
+				<%= @user_result.user.full_name %>
+			</h1>
+			<h2>
+				<%= "Test: " %>
+				<%= @user_result.test.name %>
+			</h2>
+		</section>
+	</aside>
+	<div class="span8">
+		<% @user_result.user_answers.each do |user_answer| %>
+			<ol class="user_answer">
+				<%= render partial: "questions/question", locals: { question: user_answer.question } %>
+
+				<%= "Your answer: " %>
+				<%= user_answer.answer.content %>
+
+				<%= "The correct answer: " %>
+				<%= right_answer(user_answer.question).content %>
+
+				<% if is_correct_answer?(user_answer.answer, right_answer(user_answer.question)) %>
+					<%= "Congratulation. You are correct!" %>
+				<% end %>
+			</ol>
+		<% end %>
+	</div>
+</div>
+
+<%= link_to "Another test", tests_path %>
