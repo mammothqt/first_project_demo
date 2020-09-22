@@ -19,5 +19,9 @@
 	</div>
 </div>
 
+<% if signed_in? %>
+	<%= link_to "Start the Test", new_user_result_path(:test_id => @test.id) %> |
+<% end %>
+
 <%= link_to "Back", tests_path %> |
 <%= link_to "Edit Test", edit_test_path(@test) %>
