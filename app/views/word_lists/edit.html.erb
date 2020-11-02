@@ -1,5 +1,5 @@
-<h1><%= "Edit" %></h1>
+<h1><%= t(".title") %></h1>
 
 <%= render 'form', course: @course, word_list: @word_list %>
 
-<%= link_to "Back", course_path(@course) %>
+<%= link_to t(".back"), course_path(@course) %>

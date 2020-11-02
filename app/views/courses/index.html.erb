@@ -1,30 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <h1><%= @category.name %></h1>
-<h2><%= "Courses" %></h2>
+<p id="category_description"><%= @category.description %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @courses.each do |course| %>
-      <tr>
-        <td><%= link_to course.name, category_course_path(@category, course) %></td>
-        <td><%= course.description %></td>
-        <td><%= link_to "Delete", category_course_path(@category, course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @courses.each do |course| %>
+  <div class="courses-index">
+    <div class="courses">
+      <h3><%= link_to course.name, category_course_path(@category, course) %></h3>
+      <p><%= course.description %></p>
+      <%= link_to t(".delete"), category_course_path(@category, course), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-danger btn-sm" %>
+    </div>
+  </div>
+<% end %>
 
 <br>
 
-<%= link_to "Back", categories_path %> |
-<%= link_to "Edit Category", edit_category_path(@category) %> |
-<%= link_to "New Course", new_category_course_path(@category) %>
+<%= link_to t(".back"), categories_path, class: "btn btn-default" %> |
+<%= link_to t(".edit_category"), edit_category_path(@category), class: "btn btn-primary" %> |
+<%= link_to t(".new_course"), new_category_course_path(@category), class: "btn btn-success btn-primary" %>

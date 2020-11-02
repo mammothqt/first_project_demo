@@ -11,12 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :word %>
-    <%= form.text_area :word %>
-  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 text-center">
+      <div class="field">
+        <%= form.label :word, t(".word") %>
+        <%= form.text_area :word, class: "form-control text-center" %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
+      <br>
+
+      <div class="actions">
+        <%= form.submit t(".submit"), class: "btn btn-primary" %>
+      </div>
+    </div>
   </div>
 <% end %>

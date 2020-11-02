@@ -1,0 +1,125 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+vi:
+  main_pages:
+    home:
+      page_name: "GOM TPV"
+      description: "GOM TPV chuyên cung cấp các sản phầm về gốm bao gồm: tô, ly,
+        chén, dĩa, thố, lọ hoa, ấm trà... với họa tiết đơn giản nhưng tinh tế."
+      sign_up: "Đăng ký ngay!"
+      categories: "Thể loại"
+      full_name: "Họ và tên:"
+      email: "Email:"
+      age: "Tuổi: "
+      gender: "Giới tính: "
+  layouts:
+    footer:
+      about: "Về chúng tôi |"
+      contact: "Liên lạc |"
+      help: "Trợ giúp |"
+    header:
+      page_name: "GOM TPV"
+      home: "Trang chủ |"
+      user: "Tài khoản"
+      signin: "Đăng nhập"
+      account: "Tài khoản"
+      english: "Tiếng Anh |"
+      vietnamese: "Tiếng Việt"
+      categories: "Thể loại |"
+      tests: "Bài kiểm tra |"
+  devise:
+    registrations:
+      new:
+        sign_up: "ĐĂNG KÝ:"
+        email: "Email:"
+        user_name: "Tài khoản:"
+        full_name: "Họ và tên:"
+        password: "Mật khẩu:"
+        password_confirmation: "Xác nhận mật khẩu:"
+        submit: "Đăng ký"
+        character_min: " ký tự tối thiểu"
+    sessions:
+      new:
+        log_in: "ĐĂNG NHẬP"
+        user_name: "Tài khoản:"
+        password: "Mật khẩu:"
+        remember_me: "Nhớ tài khoản"
+        submit: "Đăng nhập"
+  categories:
+    index:
+      categories: "Thể loại"
+      new_category: "Tạo thể loại mới"
+      delete: "Xóa"
+    new:
+      back: "Trở lại"
+    edit:
+      back: "Trở lại"
+      categories: "Thể loại khác"
+      title: "Sửa thể loại"
+    form:
+      name: "Tên thể loại:"
+      description: "Mô tả:"
+      submit: "Cập nhật"
+  courses:
+    index:
+      back: "Quay lại"
+      edit_category: "Sửa thể loại"
+      new_course: "Khóa học mới"
+      delete: "Xóa khóa học"
+    course:
+      delete: "Xóa khóa học"
+    form:
+      name: "Tên khóa học:"
+      description: "Mô tả:"
+      submit: "Cập nhật khóa học"
+    edit:
+      title: "Sửa khóa học"
+      back: "Trở lại"
+      courses: "Khóa học khác"
+    new:
+      back: "Trở lại"
+    show:
+      back: "Trở lại"
+      edit_course: "Chỉnh sửa khóa học"
+      create_new_word: "Tạo từ mới"
+  word_lists:
+    word_list:
+      edit: "Sửa"
+      delete: "Xóa"
+    new:
+      back: "Trở lại"
+    form:
+      word: "Từ:"
+      submit: "Xác nhận"
+    edit:
+      title: "Sửa từ"
+      back: "Trở lại"

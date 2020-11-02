@@ -1,6 +1,6 @@
-<h1><%= "Edit" %></h1>
+<h1><%= t(".title") %></h1>
 
 <%= render 'form', category: @category, course: @course %>
 
-<%= link_to "Back", category_course_path(@category, @course) %> |
-<%= link_to "Courses", category_courses_path(@category) %>
+<%= link_to t(".back"), category_course_path(@category, @course) %> |
+<%= link_to t(".courses"), category_courses_path(@category) %>
