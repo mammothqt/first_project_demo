@@ -7,7 +7,9 @@
   	<div class="categories">
       <h3><%= link_to category.name, category_courses_path(category) %></h3>
       <p><%= category.description %></p>
-      <%= link_to t(".delete"), category, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-primary btn-sm" %>
+      <% if can? :destroy, @category %>
+        <%= link_to t(".delete"), category, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-primary btn-sm" %>
+      <% end %>
     </div>
   </div>
 <% end %>
@@ -16,6 +18,8 @@
 
 <div class="category-container">
   <div class="category-new-button">
-    <%= link_to t(".new_category"), new_category_path, class: "btn btn-success btn-primary" %>
+    <% if can? :create, @category %>
+      <%= link_to t(".new_category"), new_category_path, class: "btn btn-success btn-primary" %>
+    <% end %>
   </div>
 </div>

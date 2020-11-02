@@ -6,8 +6,11 @@ class ApplicationController < ActionController::Base
 
   include SessionsHelper
 
-  protected
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_path, :alert => exception.message
+  end
 
+  protected
   def configure_permitted_parameters
     update_attrs = [:email]
     devise_parameter_sanitizer.permit :account_update, keys: update_attrs

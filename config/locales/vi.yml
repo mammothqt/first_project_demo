@@ -48,14 +48,16 @@ vi:
       help: "Trợ giúp |"
     header:
       page_name: "GOM TPV"
-      home: "Trang chủ |"
+      home: "Trang chủ"
       user: "Tài khoản"
       signin: "Đăng nhập"
       account: "Tài khoản"
-      english: "Tiếng Anh |"
+      english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
-      categories: "Thể loại |"
-      tests: "Bài kiểm tra |"
+      categories: "Thể loại"
+      tests: "Bài kiểm tra"
+      setting: "Cập nhật"
+      signout: "Đăng xuất"
   devise:
     registrations:
       new:

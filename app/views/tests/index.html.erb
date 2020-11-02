@@ -16,7 +16,9 @@
       <tr>
         <td><%= link_to test.name, test_path(test) %></td>
         <td><%= test.description %></td>
-        <td><%= link_to "Delete", test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if can? :destroy, test %>
+          <td><%= link_to "Delete", test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +26,6 @@
 
 <br>
 
-<%= link_to "New Test", new_test_path %>
+<% if can? :create, @test %>
+  <%= link_to "New Test", new_test_path %>
+<% end %>
