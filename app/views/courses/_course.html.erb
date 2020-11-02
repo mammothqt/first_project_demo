@@ -1,10 +1,10 @@
 <li>
-	<h4>
-		<span class="name">
-			<%= link_to course.name, category_course_path(@category, course) %>
-		</span>
-		<%= link_to "delete", category_course_path(@category, course), method: :delete,
-										confirm: "You sure?" %>
-	</h4>
+  <h4>
+    <span class="name">
+	  <%= link_to course.name, category_course_path(@category, course) %>
+	</span>
+	<%= link_to t(".delete"), category_course_path(@category, course), method: :delete,
+	  confirm: "You sure?" %>
+  </h4>
 	<span class="description"><%= course.description %></span>
 </li>

@@ -1,26 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-	<aside class="span4">
-		<section>
-			<h1>
-				<%= @course.name %>
-			</h1>
-			<h2>
-				<%= @course.description %>
-			</h2>
-		</section>
-	</aside>
-	<div class="span8">
-		<% if @course.word_lists.any? %>
-			<h3> <%= @course.word_lists.count %> Words </h3>
-			<ol class="courses">
-				<%= render @course.word_lists %>
-			</ol>
-		<% end %>
-	</div>
+  <aside class="span4">
+    <section>
+	  <h1><%= @course.name %></h1>
+	  <h2><%= @course.description %></h2>
+	</section>
+  </aside>
+  <div class="span8">
+    <% if @course.word_lists.any? %>
+	  <ol class="courses">
+	    <%= render @course.word_lists %>
+	  </ol>
+	<% end %>
+  </div>
 </div>
 
-<%= link_to "Back", category_courses_path(@category) %> |
-<%= link_to "Edit Course", edit_category_course_path(@category, @course) %> |
-<%= link_to "Create new word", new_course_word_list_path(@course) %>
+<%= link_to t(".back"), category_courses_path(@category),
+  class: "btn btn-default" %> |
+<%= link_to t(".edit_course"), edit_category_course_path(@category, @course),
+  class: "btn btn-primary" %> |
+<%= link_to t(".create_new_word"), new_course_word_list_path(@course),
+  class: "btn btn-success btn-primary" %>

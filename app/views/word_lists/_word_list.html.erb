@@ -1,8 +1,9 @@
 <li>
-	<h4>
-		<span class="name"><%= word_list.word%></span>
-		<%= link_to "Edit", edit_course_word_list_path(@course, word_list) %>
-		<%= link_to "Delete", course_word_list_path(@course, word_list), method: :delete,
-										confirm: "You sure?" %>
-	</h4>
+  <h4>
+    <span class="name"><%= word_list.word%></span>
+	  <%= link_to t(".edit"), edit_course_word_list_path(@course, word_list),
+	    class: "btn-primary btn-sm" %>
+	  <%= link_to t(".delete"), course_word_list_path(@course, word_list), method: :delete,
+	    confirm: "You sure?", class: "btn-danger btn-sm" %>
+  </h4>
 </li>

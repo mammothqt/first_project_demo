@@ -1,0 +1,18 @@
+// Place all the styles related to the MainPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#main-text-home {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+
+  .btn-success {
+    margin: 0;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}

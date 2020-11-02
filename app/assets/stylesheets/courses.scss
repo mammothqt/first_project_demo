@@ -1,3 +1,10 @@
 // Place all the styles related to the Courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.courses-index {
+  border: ridge;
+  .courses {
+    padding: 0px 10px 10px;
+  }
+}

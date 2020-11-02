@@ -1,27 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= "Categories" %></h1>
+<h1><%= t(".categories") %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= link_to category.name, category_courses_path(category) %></td>
-        <td><%= category.description %></td>
-        <td><%= link_to "Delete", category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @categories.each do |category| %>
+  <div class="categories-index">
+  	<div class="categories">
+      <h3><%= link_to category.name, category_courses_path(category) %></h3>
+      <p><%= category.description %></p>
+      <%= link_to t(".delete"), category, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-primary btn-sm" %>
+    </div>
+  </div>
+<% end %>
 
 <br>
 
-<%= link_to "New Category", new_category_path %>
+<div class="category-container">
+  <div class="category-new-button">
+    <%= link_to t(".new_category"), new_category_path, class: "btn btn-success btn-primary" %>
+  </div>
+</div>

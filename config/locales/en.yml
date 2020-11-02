@@ -30,4 +30,96 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  main_pages:
+    home:
+      page_name: "GOM TPV"
+      description: "On test-english.com you will find lots of free practice tests and
+        materials to help you improve your English skills™. If you don't know your level,
+        you can start by taking a Level Test."
+      sign_up: "Sign Up Now!"
+      categories: "Categories"
+      full_name: "Full name:"
+      email: "Email:"
+      age: "Age: "
+      gender: "Gender: "
+  layouts:
+    footer:
+      about: "About |"
+      contact: "Contact |"
+      help: "Help |"
+    header:
+      home: "Home |"
+      user: "User"
+      signin: "Sign in"
+      account: "Account"
+      english: "English |"
+      vietnamese: "Vietnamese"
+      categories: "Categories |"
+      tests: "Tests"
+  devise:
+    registrations:
+      new:
+        sign_up: "SIGN UP"
+        email: "Email:"
+        user_name: "User Name:"
+        full_name: "Full Name:"
+        password: "Password:"
+        password_confirmation: "Password Confirmation:"
+        submit: "Submit"
+        character_min: " character minimum"
+    sessions:
+      new:
+        log_in: "LOG IN"
+        user_name: "User name:"
+        password: "Password:"
+        remember_me: "Remember me"
+        submit: "Log in"
+  categories:
+    index:
+      categories: "Categories"
+      new_category: "Create new category"
+      delete: "Delete"
+    new:
+      back: "Back"
+    edit:
+      back: "Back"
+      categories: "Categories"
+      title: "Edit Category"
+    form:
+      name: "Name"
+      description: "Description"
+      submit: "Submit"
+  courses:
+    index:
+      back: "Back"
+      edit_category: "Edit category"
+      new_course: "New course"
+      delete: "Delete course"
+    course:
+      delete: "Delete course"
+    form:
+      name: "Name"
+      description: "Description"
+      submit: "Submit"
+    edit:
+      title: "Edit course"
+      back: "Back"
+      courses: "Courses"
+    new:
+      back: "Back"
+    show:
+      back: "Back"
+      edit_course: "Edit course"
+      create_new_word: "Create new word"
+  word_lists:
+    word_list:
+      edit: "Edit"
+      delete: "Delete"
+    new:
+      back: "Back"
+    form:
+      word: "Word:"
+      submit: "Submit"
+    edit:
+      title: "Edit word"
+      back: "Back"
