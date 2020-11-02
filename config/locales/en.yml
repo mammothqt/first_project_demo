@@ -48,14 +48,16 @@ en:
       contact: "Contact |"
       help: "Help |"
     header:
-      home: "Home |"
+      home: "Home"
       user: "User"
       signin: "Sign in"
       account: "Account"
-      english: "English |"
+      english: "English"
       vietnamese: "Vietnamese"
-      categories: "Categories |"
+      categories: "Categories"
       tests: "Tests"
+      setting: "Setting"
+      signout: "Log out"
   devise:
     registrations:
       new:

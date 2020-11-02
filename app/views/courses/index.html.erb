@@ -8,13 +8,19 @@
     <div class="courses">
       <h3><%= link_to course.name, category_course_path(@category, course) %></h3>
       <p><%= course.description %></p>
-      <%= link_to t(".delete"), category_course_path(@category, course), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-danger btn-sm" %>
+      <% if can? :destroy, @course %>
+        <%= link_to t(".delete"), category_course_path(@category, course), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-danger btn-sm" %>
+      <% end %>
     </div>
   </div>
 <% end %>
 
 <br>
 
-<%= link_to t(".back"), categories_path, class: "btn btn-default" %> |
-<%= link_to t(".edit_category"), edit_category_path(@category), class: "btn btn-primary" %> |
-<%= link_to t(".new_course"), new_category_course_path(@category), class: "btn btn-success btn-primary" %>
+<%= link_to t(".back"), categories_path, class: "btn btn-default" %>
+<% if can? :update, @category %>
+  | <%= link_to t(".edit_category"), edit_category_path(@category), class: "btn btn-primary" %> |
+<% end %>
+<% if can? :create, @course %>
+  <%= link_to t(".new_course"), new_category_course_path(@category), class: "btn btn-success btn-primary" %>
+<% end %>
