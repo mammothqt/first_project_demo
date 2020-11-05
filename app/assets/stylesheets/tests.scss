@@ -1,3 +1,40 @@
 // Place all the styles related to the tests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.tests-index {
+  border: ridge;
+  .tests {
+    padding: 0px 10px 10px;
+  }
+}
+
+.test-container {
+  height: 100px;
+  position: relative;
+}
+
+.test-new-button {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#edit-name-text {
+  height: 75px;
+}
+
+#edit-description-text {
+  height: 150px;
+}
+
+#edit-description-field {
+  padding-top: 10px;
+}
+
+#test-description {
+  text-align: center;
+}

@@ -1,6 +1,6 @@
-<h1><%= "Edit" %></h1>
+<h1><%= t(".edit") %></h1>
 
 <%= render 'form', test: @test %>
 
-<%= link_to "Back", test_path(@test) %> |
-<%= link_to "Tests", tests_path %>
+<%= link_to t(".back"), test_path(@test) %> |
+<%= link_to t(".tests"), tests_path %>

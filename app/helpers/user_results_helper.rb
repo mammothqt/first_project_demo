@@ -1,9 +1,10 @@
 module UserResultsHelper
-	def right_answer(question)
-	  question.answers.find_by_correct_answer true
-	end
+  def display_result  result, total
+  	"#{result}/#{total}"
+  end
 
-	def is_correct_answer?(user_answer, correct_answer)
-		user_answer == correct_answer
-	end
+  def display_icon_result answer
+    answer.is_correct ? content_tag(:i, nil, class: "fa fa-check") :
+      content_tag(:i, nil, class: "fa fa-times")
+  end
 end

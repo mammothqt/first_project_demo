@@ -1,29 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
-  <aside class="span4">
-    <section>
-	  <h1>
-		<%= "Test: "%>
-		<%= @test.name %>
-	  </h1>
-	  <%= @test.description %>
-	</section>
-  </aside>
-  <div class="span8">
-	<% @test.questions.each do |question| %>
-	  <ol class="question">
-	    <%= render question %>
-	  </ol>
-	<% end %>
-  </div>
+<h1><%= @test.name %></h1>
+<p id="test-description"><%= @test.description %></p>
+
+<div class="test-container">
+  <% if signed_in? %>
+    <div class="test-new-button">
+      <%= link_to t(".start"), new_user_test_user_result_path(current_user, @test), class: "btn btn-success btn-lg" %>
+    </div>
+  <% end %>
 </div>
 
-<% if signed_in? %>
-	<%= link_to "Start the Test", new_user_result_path(:test_id => @test.id) %> |
-<% end %>
+<%= link_to t(".more"), tests_path, class: "btn btn-default" %>
 
-<%= link_to "Back", tests_path %>
 <% if can? :update, @test %>
-  | <%= link_to "Edit Test", edit_test_path(@test) %>
+  <%= link_to t(".edit_test"), edit_test_path(@test), class: "btn btn-primary" %>
 <% end %>

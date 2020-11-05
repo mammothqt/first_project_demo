@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <aside class="span4">
+    <section>
+	    <h1><%= @user.full_name %></h1>
+	  </section>
+  </aside>
+  <table>
+  	<tr>
+  	  <th><%= t(".num") %></th>
+  	  <th><%= t(".test_name") %></th>
+  	  <th><%= t(".test_day") %></th>
+  	  <th><%= t(".result") %></th>
+  	</tr>
+  	<%= render @user_results.includes(:user_answers) %>
+  </table>
+</div>

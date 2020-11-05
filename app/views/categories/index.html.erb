@@ -2,19 +2,11 @@
 
 <h1><%= t(".categories") %></h1>
 
-<% @categories.each do |category| %>
-  <div class="categories-index">
-  	<div class="categories">
-      <h3><%= link_to category.name, category_courses_path(category) %></h3>
-      <p><%= category.description %></p>
-      <% if can? :destroy, @category %>
-        <%= link_to t(".delete"), category, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-primary btn-sm" %>
-      <% end %>
-    </div>
-  </div>
-<% end %>
+<%= will_paginate %>
 
-<br>
+<%= render @categories %>
+
+<%= will_paginate %>
 
 <div class="category-container">
   <div class="category-new-button">

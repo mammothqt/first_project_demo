@@ -48,10 +48,6 @@ section {
   overflow: auto;
 }
 
-textarea {
-  resize: vertical;
-}
-
 .center {
   text-align: center;
   h1 {
@@ -97,4 +93,8 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+textarea {
+  resize: none;
 }

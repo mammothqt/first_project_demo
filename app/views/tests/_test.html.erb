@@ -1,0 +1,9 @@
+<div class="tests-index">
+  <div class="tests">
+    <h3><%= link_to test.name, test_path(test) %></h3>
+    <p><%= test.description %></p>
+    <% if can? :destroy, test %>
+      <%= link_to t(".delete"), test, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-primary btn-sm" %>
+    <% end %>
+  </div>
+</div>
