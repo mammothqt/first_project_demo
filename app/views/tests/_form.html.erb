@@ -11,21 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_area :name %>
-  </div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 text-center">
+      <div class="field">
+        <%= form.label :name, t(".name") %>
+        <%= form.text_area :name, class: "form-control text-center", id: "edit-name-text", maxlength: 150 %>
+      </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+      <div class="field", id="edit-description-field">
+        <%= form.label :description, t(".description") %>
+        <%= form.text_area :description, class: "form-control text-center", id: "edit-description-text", maxlength: 1500 %>
+      </div>
 
-  <%= form.fields_for :questions do |f| %>
-    <%= render "question", f: f %>
-  <% end %>
+      <ol><%= form.fields_for :questions do |f| %>
+        <div class="field">
+          <li><%= f.label :content %></li>
+          <%= f.text_area :content %>
+        </div>
 
-  <div class="actions">
-    <%= form.submit %>
+        <%= f.fields_for :answers do |u| %>
+          <div class="field">
+            <%= f.radio_button :correct_answer_id, u.object.id %>
+            <%= u.label :content, t(".answer") + "#{u.index + 1}: " %>
+            <%= u.text_area :content %>
+          </div>
+        <% end %>
+      <% end %></ol>
+
+      <div class="actions">
+        <%= form.submit t(".submit"), class: "btn btn-primary" %>
+      </div>
+    </div>
   </div>
 <% end %>

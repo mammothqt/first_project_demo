@@ -1,35 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-	<aside class="span4">
-		<section>
-			<h1>
-				<%= "Name: " %>
-				<%= @user_result.user.full_name %>
-			</h1>
-			<h2>
-				<%= "Test: " %>
-				<%= @user_result.test.name %>
-			</h2>
-		</section>
-	</aside>
-	<div class="span8">
-		<% @user_result.user_answers.each do |user_answer| %>
-			<ol class="user_answer">
-				<%= render partial: "questions/question", locals: { question: user_answer.question } %>
-
-				<%= "Your answer: " %>
-				<%= user_answer.answer.content %>
-
-				<%= "The correct answer: " %>
-				<%= right_answer(user_answer.question).content %>
-
-				<% if is_correct_answer?(user_answer.answer, right_answer(user_answer.question)) %>
-					<%= "Congratulation. You are correct!" %>
-				<% end %>
-			</ol>
-		<% end %>
-	</div>
+  <aside class="span4">
+    <section>
+	  <h1><%= @user_result.test_name %></h1>
+	  <p class="test-day">
+	    <%= t(".date_test") %>
+	    <%= @user_result.decorate.created_at_format %>
+	  </p>
+	</section>
+  </aside>
+  <table>
+    <tr>
+  	  <th><%= "No" %></th>
+	  <th><%= t(".question") %></th>
+	  <th><%= t(".your_answer") %></th>
+	  <th><%= t(".correct_answer") %></th>
+	  <th><%= t(".result") %></th>
+	</tr>
+	<%= render @user_result.user_answers.includes(:answer) %>
+  </table>
 </div>
 
-<%= link_to "Another test", tests_path %>
+<%= link_to t(".another_test"), tests_path %>

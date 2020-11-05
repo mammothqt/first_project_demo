@@ -25,6 +25,8 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'rails-i18n'
 gem 'actionview', '>= 6.0.3.3'
+gem 'draper'
+gem 'faker'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -40,6 +42,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
+  gem 'bullet'
 end
 
 group :development do

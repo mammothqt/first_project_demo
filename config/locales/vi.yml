@@ -32,9 +32,8 @@
 vi:
   main_pages:
     home:
-      page_name: "GOM TPV"
-      description: "GOM TPV chuyên cung cấp các sản phầm về gốm bao gồm: tô, ly,
-        chén, dĩa, thố, lọ hoa, ấm trà... với họa tiết đơn giản nhưng tinh tế."
+      page_name: "GMO"
+      description: "Tiếng Anh cho mọi người"
       sign_up: "Đăng ký ngay!"
       categories: "Thể loại"
       full_name: "Họ và tên:"
@@ -83,6 +82,7 @@ vi:
       delete: "Xóa"
     new:
       back: "Trở lại"
+      new_category: "Tạo thể loại mới"
     edit:
       back: "Trở lại"
       categories: "Thể loại khác"
@@ -91,6 +91,8 @@ vi:
       name: "Tên thể loại:"
       description: "Mô tả:"
       submit: "Cập nhật"
+    category:
+      delete: "Xóa thể loại"
   courses:
     index:
       back: "Quay lại"
@@ -125,3 +127,45 @@ vi:
     edit:
       title: "Sửa từ"
       back: "Trở lại"
+  tests:
+    index:
+      test: "Bài kiểm tra"
+      delete: "Xóa"
+      new_test: "Tạo bài kiểm tra mới"
+    edit:
+      back: "Trở lại"
+      tests: "Bài kiểm tra khác"
+      edit: "Chỉnh sửa bài kiểm tra"
+    new:
+      back: "Trở lại"
+      new_test: "Bài kiểm tra mới"
+    form:
+      name: "Tên bài kiểm tra: "
+      description: "Mô tả bài kiểm tra: "
+      question: "Câu hỏi "
+      answer: "Đáp án "
+      submit: "Xác nhận"
+    show:
+      start: "Bắt đầu kiểm tra"
+      more: "Bài kiểm tra khác"
+      edit_test: "Chỉnh sửa bài kiểm tra"
+    test:
+      delete: "Xóa bài kiểm tra"
+  user_results:
+    new:
+      submit: "Nộp bài"
+    show:
+      your_answer: "Đáp án của bạn"
+      question: "Câu hỏi"
+      correct_answer: "Đáp án đúng"
+      result: "Kết quả"
+      another_test: "Bài thi khác"
+      date_test: "Ngày thi: "
+    index:
+      num: "STT"
+      test_name: "Tên bài thi"
+      test_day: "Ngày thi"
+      result: "Kết quả"
+  will_paginate:
+    previous_label: "Trang trước"
+    next_label: "Trang sau"

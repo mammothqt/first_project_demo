@@ -29,6 +29,10 @@ Rails.application.routes.draw do
       resources :questions
     end
 
-    resources :user_results
+    resources :users do
+      resources :tests do
+        resources :user_results
+      end
+    end
   end
 end

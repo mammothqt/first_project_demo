@@ -1,3 +1,55 @@
 // Place all the styles related to the UserResults controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+ol.order-answer {
+  list-style-type: upper-alpha;
+  position: relative;
+}
+
+#test-content ol il {
+  light-style-position: inside;
+}
+
+#submit-answer {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#submit-button {
+  position: relative;
+  padding-top: 50px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+body {
+  counter-reset: mycount;
+}
+
+.mycount:before{
+  counter-increment: mycount;      /* Increment the counter */
+  content: counter(mycount) ". "; /* Display the counter */
+}
+
+.test-day {
+  text-align: center;
+}

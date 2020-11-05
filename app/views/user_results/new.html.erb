@@ -1,25 +1,30 @@
-<div class="span8">
-  <%= form_for(@user_result) do |f| %>
+<p id="notice"><%= notice %></p>
+
+<h1><%= @test.name %></h1>
+
+<div class="span8", id="test-content">
+  <%= form_for([@user, @test, @user_result]) do |f| %>
+    <ol class="order-question">
+	  <% @test.questions.each do |question| %>
+	    <h3>
+	      <li><%= question.content %></li>
+	    </h3>
+
+	    <%= f.fields_for :user_answers do |u| %>
+	      <%= u.collection_radio_buttons(:user_answer, question.answers.all, :id, :content) do |b|%>
+		    <div class="display-answer">
+		      <%= b.radio_button %>
+		      <%= b.label %>
+		    </div>
+	      <% end %>
+	      <%= u.hidden_field :question_id, :value => question.id %>
+	    <% end %>
+      <% end %>
+    </ol>
     <%= f.hidden_field :test_id, :value => @test.id %>
-	<%= f.hidden_field :user_id, :value => current_user.id %>
 
-	<% @test.questions.each do |question| %>
-	  <h3>
-	    <li><%= question.content %></li>
-	  </h3>
-
-	  <%= f.fields_for :user_answers do |u| %>
-	    <%= u.collection_radio_buttons(:user_answer, question.answers.all, :id, :content) do |b|%>
-		  <div>
-		    <%= b.radio_button %>
-			<%= b.label %>
-		  </div>
-		<% end %>
-	  <% end %>
-    <% end %>
-
-	<div class="actions">
-      <%= f.submit "Submit the answer", class: "btn btn-primary" %>
-  	</div>
+    <div class="actions", id="submit-button">
+      <%= f.submit t(".submit"), class: "btn btn-primary btn-lg", id: "submit-answer" %>
+    </div>
   <% end %>
 </div>

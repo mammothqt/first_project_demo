@@ -83,6 +83,7 @@ en:
       delete: "Delete"
     new:
       back: "Back"
+      new_category: "New category"
     edit:
       back: "Back"
       categories: "Categories"
@@ -125,3 +126,42 @@ en:
     edit:
       title: "Edit word"
       back: "Back"
+  tests:
+    index:
+      test: "Tests"
+      delete: "Delete"
+      new_test: "Create new test"
+    edit:
+      back: "Back"
+      tests: "Tests"
+      edit: "Edit Test"
+    new:
+      back: "Back"
+      new_test: "New test"
+    form:
+      name: "Test Name: "
+      description: "Description: "
+      question: "Question "
+      answer: "Answer "
+    show:
+      start: "Start the test"
+      more: "Tests"
+      edit_test: "Edit test"
+  user_results:
+    new:
+      submit: "Submit"
+    show:
+      your_answer: "Your Answer"
+      question: "Question"
+      correct_answer: "Correct Answer"
+      result: "Result"
+      another_test: "Another Test"
+      date_test: "Test Day"
+    index:
+      num: "No"
+      test_name: "Test"
+      test_day: "Date of test"
+      result: "Result"
+  will_paginate:
+    previous_label: "Previous page"
+    next_label: "Next page"

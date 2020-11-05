@@ -18,35 +18,35 @@ class WordListsController < ApplicationController
 
 	  if @word_list.save
 	    flash[:success] = "Word has been created!"
-	    redirect_to course_path @course
+	    redirect_to category_course_path @course.category, @course
 	  else
-	    render new_course_word_list_path(@course)
+	    render 'new'
 	  end
   end
 
   def update
-    if @word_list.update(word_list_params)
+    if @word_list.update word_list_params
 	    flash[:success] = "Word has been updated"
-	    redirect_to course_path @course
+	    redirect_to category_course_path @course.category, @course
  	  else
-	    render edit_course_word_list_path(@course, @word_list)
+	    render 'edit'
 	  end
   end
 
   def destroy
 	  flash[:success] = "Word has been deleted" if @word_list.destroy
-	  redirect_to course_path(@course)
+	  redirect_to category_course_path @course.category, @course
   end
 
   private
   def set_course
 	  @course = Course.find_by_id params[:course_id]
-	  redirect_to root_path if @category.nil?
+	  redirect_to root_path if @course.nil?
   end
 
   def set_word_list
 	  @word_list = @course.word_lists.find_by_id params[:id]
-	  redirect_to root_path if @course.nil?
+	  redirect_to root_path if @word_list.nil?
   end
 
   def word_list_params
