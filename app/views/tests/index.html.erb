@@ -8,8 +8,12 @@
 
 <div class="test-container">
   <div class="test-new-button">
-    <% if can? :create, @test %>
+    <% if can? :create, Test %>
       <%= link_to t(".new_test"), new_test_path, class: "btn btn-success btn-primary" %>
     <% end %>
   </div>
 </div>
+
+<h1>Export csv</h1>
+<%= link_to t(".link_export"), export_tests_path(format: :csv) %>
+

@@ -39,6 +39,8 @@ Rails.application.routes.draw do
       resources :user_results, only: [:index, :show]
     end
 
-    resources :users, only: :index
+    resources :export_users, only: :index
+
+    resources :export_tests, only: :index
   end
 end

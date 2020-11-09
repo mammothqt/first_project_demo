@@ -4,7 +4,12 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:destroy, :show]
 
   def index
-  	@users = User.all.paginate page: params[:page], per_page: 10
+  	@users = User.all.paginate page: params[:page], per_page: Settings.user.index.number
+
+    respond_to do |format|
+      format.html
+      format.xls { send_data "\uFEFF" + @users.to_csv, filename: "users-#{Date.today}.csv" }
+    end
   end
 
   def destroy

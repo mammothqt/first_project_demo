@@ -1,0 +1,6 @@
+user:
+  index:
+    number: 10
+questions: questions
+decorate_questions:
+  - question_content

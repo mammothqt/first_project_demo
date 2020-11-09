@@ -182,6 +182,17 @@ en:
       female: "Female"
       male: "Male"
       user_result: "User Result"
+  header_csv:
+    full_name: "Full Name"
+    user_name: "User Name"
+    email: "Email"
+    age: "Age"
+    gender: "Sex"
+    arr_user_results: "User Result"
+    name: "Test Name"
+    description: "Test Description"
+    arr_questions: "Questions"
+    question_content: "Question"
   will_paginate:
     previous_label: "Previous page"
     next_label: "Next page"

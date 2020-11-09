@@ -7,6 +7,8 @@ class Test < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }
   validates :description, length: { maximum: 500 }
 
+  CSV_ATTRIBUTES = %w(name description questions).freeze
+
   def number_question_test
     questions.count
   end

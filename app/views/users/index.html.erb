@@ -17,4 +17,7 @@
   <%= will_paginate %>
 </div>
 
+<%= link_to 'Export', users_path(format: 'xls') %>
+
 <h1>Export csv</h1>
+<%= link_to t(".link_export"), export_users_path(format: :csv) %>

@@ -184,6 +184,17 @@ vi:
       female: "Nữ"
       male: "Nam"
       user_result: "Kết quả thi"
+  header_csv:
+    full_name: "Họ và tên"
+    user_name: "Tài khoản"
+    email: "Email"
+    age: "Tuổi"
+    gender: "Giới tính"
+    arr_user_results: "Kết quả thi"
+    name: "Tên bài kiểm tra"
+    description: "Mô tả bài kiểm tra"
+    arr_questions: "Câu hỏi"
+    question_content: "Câu hỏi"
   will_paginate:
     previous_label: "Trang trước"
     next_label: "Trang sau"
