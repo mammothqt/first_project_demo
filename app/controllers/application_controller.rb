@@ -12,8 +12,10 @@ class ApplicationController < ActionController::Base
 
   protected
   def configure_permitted_parameters
-    update_attrs = [:email]
+    update_attrs = [:email, :age, :gender, :full_name]
+    signup_attrs = [:email, :age, :full_name]
     devise_parameter_sanitizer.permit :account_update, keys: update_attrs
+    devise_parameter_sanitizer.permit :sign_up, keys: signup_attrs
   end
 
   def set_locale

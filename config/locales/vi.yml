@@ -36,27 +36,25 @@ vi:
       description: "Tiếng Anh cho mọi người"
       sign_up: "Đăng ký ngay!"
       categories: "Thể loại"
-      full_name: "Họ và tên:"
-      email: "Email:"
-      age: "Tuổi: "
-      gender: "Giới tính: "
+      user_management: "Quản lý tài khoản"
   layouts:
     footer:
       about: "Về chúng tôi |"
-      contact: "Liên lạc |"
+      contact: "Liên lạc"
       help: "Trợ giúp |"
+      english: "Tiếng Anh |"
+      vietnamese: "Tiếng Việt"
     header:
       page_name: "GOM TPV"
       home: "Trang chủ"
       user: "Tài khoản"
       signin: "Đăng nhập"
       account: "Tài khoản"
-      english: "Tiếng Anh"
-      vietnamese: "Tiếng Việt"
       categories: "Thể loại"
       tests: "Bài kiểm tra"
       setting: "Cập nhật"
       signout: "Đăng xuất"
+      user_info: "Thông tin tài khoản"
   devise:
     registrations:
       new:
@@ -159,13 +157,53 @@ vi:
       question: "Câu hỏi"
       correct_answer: "Đáp án đúng"
       result: "Kết quả"
-      another_test: "Bài thi khác"
       date_test: "Ngày thi: "
+      num: "STT"
+      user_result: "Kết quả khác"
+      grade: "Điểm của bạn: "
+      status_result: "Bạn đã "
+      pass: "đậu bài kiểm tra"
+      fail: "rớt bài kiểm tra"
     index:
       num: "STT"
       test_name: "Tên bài thi"
       test_day: "Ngày thi"
       result: "Kết quả"
+      grade: "Điểm"
+  users:
+    index:
+      user_list: "Danh sách tài khoản"
+      num: "STT"
+      user_full_name: "Tên tài khoản"
+    user:
+      delete: "Xóa tài khoản"
+    show:
+      email: "Email"
+      age: "Tuổi"
+      gender: "Giới tính"
+      female: "Nữ"
+      male: "Nam"
+      user_result: "Kết quả thi"
   will_paginate:
     previous_label: "Trang trước"
     next_label: "Trang sau"
+  shared:
+    error_messages:
+      error_alert: "Xuất hiện lỗi:"
+  activerecord:
+    attributes:
+      questions:
+        content: "Nội dung câu hỏi"
+        answers:
+          content: "Nội dung câu trả lời"
+      test:
+        name: "Tên bài kiểm tra"
+        description: "Mô tả bài kiểm tra"
+      category:
+        name: "Tên thể loại"
+        description: "Mô tả"
+      course:
+        name: "Tên khóa học"
+        description: "Mô tả"
+      word_list:
+        word: "Từ"

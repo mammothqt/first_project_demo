@@ -4,8 +4,8 @@ class Test < ApplicationRecord
 
   accepts_nested_attributes_for :questions
 
-  validates :name, presence: true, length: { maximum: 150 }
-  validates :description, length: { maximum: 1000 }
+  validates :name, presence: true, length: { maximum: 50 }
+  validates :description, length: { maximum: 500 }
 
   def number_question_test
     questions.count

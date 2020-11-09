@@ -1,6 +1,7 @@
 <tr>
   <td><span class="mycount"></span></td>
-  <td><%= link_to user_result.test_name, user_test_user_result_path(@user, @test, user_result) %></td>
+  <td><%= link_to user_result.test_name, user_user_result_path(@user, user_result) %></td>
   <td><%= user_result.decorate.created_at_format %></td>
   <td><%= display_result user_result.number_correct_answer, user_result.test.number_question_test %></td>
+  <td><%= user_result.grade %></td>
 </tr>

@@ -1,15 +1,5 @@
 <%= form_with(model: category, local: true) do |form| %>
-  <% if category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
-      <ul>
-        <% category.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  <%= render 'shared/error_messages', object: form.object %>
   <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
       <div class="field">
@@ -22,9 +12,7 @@
         <%= form.text_area :description, class: "form-control text-center" %>
       </div>
 
-      <br>
-
-      <div class="actions">
+      <div class="actions" id="category-submit">
         <%= form.submit t(".submit"), class: "btn btn-primary" %>
       </div>
     </div>

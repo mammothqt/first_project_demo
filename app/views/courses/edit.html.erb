@@ -2,5 +2,5 @@
 
 <%= render 'form', category: @category, course: @course %>
 
-<%= link_to t(".back"), category_course_path(@category, @course) %> |
-<%= link_to t(".courses"), category_courses_path(@category) %>
+<%= link_to t(".back"), category_course_path(@category, @course), class: "btn btn-default" %>
+<%= link_to t(".courses"), category_courses_path(@category), class: "btn btn-primary" %>

@@ -2,7 +2,7 @@
   <td><span class="mycount"></span></td>
   <td><%= user_answer.question_content %></td>
   <td><%= user_answer.answer_content %></td>
-  <td><%= user_answer.decorate.right_answer.content %></td>
+  <td><%= user_answer.decorate.right_answer&.content %></td>
   <td><%= display_icon_result user_answer %></td>
 </tr>
 

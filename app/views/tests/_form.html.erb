@@ -1,44 +1,36 @@
 <%= form_with(model: test, local: true) do |form| %>
-  <% if test.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(test.errors.count, "error") %> prohibited this test from being saved:</h2>
-
-      <ul>
-        <% test.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  <%= render 'shared/error_messages', object: form.object %>
   <div class="row">
-    <div class="col-md-10 col-md-offset-1 text-center">
-      <div class="field">
-        <%= form.label :name, t(".name") %>
-        <%= form.text_area :name, class: "form-control text-center", id: "edit-name-text", maxlength: 150 %>
-      </div>
-
-      <div class="field", id="edit-description-field">
-        <%= form.label :description, t(".description") %>
-        <%= form.text_area :description, class: "form-control text-center", id: "edit-description-text", maxlength: 1500 %>
-      </div>
-
-      <ol><%= form.fields_for :questions do |f| %>
+    <div>
+      <div class="col-md-10 col-md-offset-1 text-center">
         <div class="field">
-          <li><%= f.label :content %></li>
-          <%= f.text_area :content %>
+          <%= form.label :name, t(".name") %>
+          <%= form.text_area :name, class: "form-control text-center", id: "name-text", maxlength: 150 %>
         </div>
 
-        <%= f.fields_for :answers do |u| %>
-          <div class="field">
-            <%= f.radio_button :correct_answer_id, u.object.id %>
-            <%= u.label :content, t(".answer") + "#{u.index + 1}: " %>
-            <%= u.text_area :content %>
-          </div>
-        <% end %>
-      <% end %></ol>
+        <div class="field", id="edit-description-field">
+          <%= form.label :description, t(".description") %>
+          <%= form.text_area :description, class: "form-control text-center", id: "description-text", maxlength: 1500 %>
+        </div>
+      </div>
 
-      <div class="actions">
+      <div class="col-md-7 col-md-offset-1">
+        <%= form.fields_for :questions do |f| %>
+          <div class="field" id="question-attribute">
+            <%= f.label :content, t(".question") + "#{f.index + 1}: ", id: "question-label" %>
+            <%= f.text_area :content, id: "question-text"%>
+          </div>
+
+          <%= f.fields_for :answers do |u| %>
+            <div class="field" id="answer-attribute">
+              <%= f.radio_button :correct_answer_id, u.object.id, id: "radio-button" %>
+              <%= u.text_area :content, id: "answer-text" %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="actions col-md-10 col-md-offset-1 text-center">
         <%= form.submit t(".submit"), class: "btn btn-primary" %>
       </div>
     </div>

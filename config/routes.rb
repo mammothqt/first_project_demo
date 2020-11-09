@@ -31,8 +31,14 @@ Rails.application.routes.draw do
 
     resources :users do
       resources :tests do
-        resources :user_results
+        resources :user_results, only: [:new, :create, :show]
       end
     end
+
+    resources :users do
+      resources :user_results, only: [:index, :show]
+    end
+
+    resources :users, only: :index
   end
 end

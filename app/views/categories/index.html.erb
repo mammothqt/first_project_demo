@@ -2,15 +2,13 @@
 
 <h1><%= t(".categories") %></h1>
 
-<%= will_paginate %>
-
 <%= render @categories %>
 
 <%= will_paginate %>
 
 <div class="category-container">
   <div class="category-new-button">
-    <% if can? :create, @category %>
+    <% if can? :create, Category %>
       <%= link_to t(".new_category"), new_category_path, class: "btn btn-success btn-primary" %>
     <% end %>
   </div>
