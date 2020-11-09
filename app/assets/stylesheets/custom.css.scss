@@ -26,6 +26,10 @@ ul {
   }
 }
 
+ul#choose-language-button {
+  float: left;
+}
+
 /* header */
 
 header {
@@ -97,4 +101,32 @@ p {
 
 textarea {
   resize: none;
+}
+
+#error_explanation {
+  color: #f00;
+  border: 2px red;
+  margin-bottom: 20px;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10px;
+  ul {
+    float: left;
+    li {
+      margin: 0 0 18px 0;
+      font-size: 12px;
+      text-align: left;
+    }
+  }
+}
+
+.alert.alert-error {
+  position: relative;
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
 }

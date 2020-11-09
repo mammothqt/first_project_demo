@@ -3,7 +3,7 @@
 <%= render 'form', category: @category %>
 
 <% if can? :category, @category %>
-  <%= link_to t(".back"), category_courses_path(@category) %> |
+  <%= link_to t(".back"), category_courses_path(@category), class: "btn btn-default" %>
 <% end %>
 
-<%= link_to t(".categories"), categories_path %>
+<%= link_to t(".categories"), categories_path, class: "btn btn-primary" %>

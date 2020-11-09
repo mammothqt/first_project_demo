@@ -4,7 +4,7 @@ class TestsController < ApplicationController
 
   def new
     @test = Test.new
-    1.times {
+    10.times {
 	  @question = @test.questions.build
       4.times { @answer = @question.answers.build }
     }

@@ -32,32 +32,30 @@
 en:
   main_pages:
     home:
-      page_name: "GOM TPV"
+      page_name: "GMO"
       description: "On test-english.com you will find lots of free practice tests and
         materials to help you improve your English skills™. If you don't know your level,
         you can start by taking a Level Test."
       sign_up: "Sign Up Now!"
       categories: "Categories"
-      full_name: "Full name:"
-      email: "Email:"
-      age: "Age: "
-      gender: "Gender: "
+      user_management: "User Management"
   layouts:
     footer:
       about: "About |"
-      contact: "Contact |"
+      contact: "Contact"
       help: "Help |"
+      english: "English |"
+      vietnamese: "Vietnamese"
     header:
       home: "Home"
       user: "User"
       signin: "Sign in"
       account: "Account"
-      english: "English"
-      vietnamese: "Vietnamese"
       categories: "Categories"
       tests: "Tests"
       setting: "Setting"
       signout: "Log out"
+      user_info: "User Information"
   devise:
     registrations:
       new:
@@ -92,6 +90,8 @@ en:
       name: "Name"
       description: "Description"
       submit: "Submit"
+    category:
+      delete: "Delete category"
   courses:
     index:
       back: "Back"
@@ -143,10 +143,13 @@ en:
       description: "Description: "
       question: "Question "
       answer: "Answer "
+      submit: "Submit"
     show:
       start: "Start the test"
       more: "Tests"
       edit_test: "Edit test"
+    test:
+      delete: "Delete test"
   user_results:
     new:
       submit: "Submit"
@@ -155,13 +158,50 @@ en:
       question: "Question"
       correct_answer: "Correct Answer"
       result: "Result"
-      another_test: "Another Test"
       date_test: "Test Day"
+      num: "No"
+      user_result: "Another Result"
+      grade: "Your grade: "
     index:
       num: "No"
       test_name: "Test"
       test_day: "Date of test"
       result: "Result"
+      grade: "Grade"
+  users:
+    index:
+      user_list: "User List"
+      num: "No"
+      user_full_name: "User Name"
+    user:
+      delete: "Delete user"
+    show:
+      email: "Email"
+      age: "Age"
+      gender: "Gender"
+      female: "Female"
+      male: "Male"
+      user_result: "User Result"
   will_paginate:
     previous_label: "Previous page"
     next_label: "Next page"
+  shared:
+    error_messages:
+      error_alert: "Error is existed:"
+  activerecord:
+    attributes:
+      questions:
+        content: "Question content"
+        answers:
+          content: "Answer content"
+      test:
+        name: "Test name"
+        description: "Test description"
+      category:
+        name: "Category name"
+        description: "Category description"
+      course:
+        name: "Course name"
+        description: "Course description"
+      word_list:
+        word: "Word"

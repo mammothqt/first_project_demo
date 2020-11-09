@@ -7,4 +7,8 @@ module UserResultsHelper
     answer.is_correct ? content_tag(:i, nil, class: "fa fa-check") :
       content_tag(:i, nil, class: "fa fa-times")
   end
+
+  def pass_or_fail status
+  	status ? t(".pass") : t(".fail")
+  end
 end

@@ -1,16 +1,5 @@
 <%= form_with(model: [course, word_list], local: true) do |form| %>
-  <% if word_list.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(word_list.errors.count, "error") %> prohibited this word from being saved:</h2>
-
-      <ul>
-        <% word_list.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  <%= render 'shared/error_messages', object: form.object %>
   <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
       <div class="field">
@@ -18,9 +7,7 @@
         <%= form.text_area :word, class: "form-control text-center" %>
       </div>
 
-      <br>
-
-      <div class="actions">
+      <div class="actions", id="word-submit">
         <%= form.submit t(".submit"), class: "btn btn-primary" %>
       </div>
     </div>

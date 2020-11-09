@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <aside class="span4">
+    <section>
+	  <h1><%= t(".user_list") %></h1>
+	</section>
+  </aside>
+  <table>
+  	<tr>
+  	  <th><%= t(".num") %></th>
+  	  <th><%= t(".user_full_name") %></th>
+  	  <th></th>
+  	</tr>
+  	<%= render @users %>
+  </table>
+  <%= will_paginate %>
+</div>
+
+<h1>Export csv</h1>

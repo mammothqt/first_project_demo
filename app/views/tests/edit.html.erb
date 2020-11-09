@@ -2,5 +2,5 @@
 
 <%= render 'form', test: @test %>
 
-<%= link_to t(".back"), test_path(@test) %> |
-<%= link_to t(".tests"), tests_path %>
+<%= link_to t(".back"), test_path(@test), class: "btn btn-default" %>
+<%= link_to t(".tests"), tests_path, class: "btn btn-primary" %>

@@ -46,10 +46,19 @@ body {
 }
 
 .mycount:before{
-  counter-increment: mycount;      /* Increment the counter */
-  content: counter(mycount) ". "; /* Display the counter */
+  counter-increment: mycount;
+  content: counter(mycount) ". ";
 }
 
-.test-day {
+.another-button {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.user-result-grade {
+  text-align: center;
+}
+
+.user-result-status {
   text-align: center;
 }

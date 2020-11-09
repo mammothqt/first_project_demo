@@ -7,16 +7,13 @@
 		  <li><%= link_to t(".categories"), categories_path %></li>
 		  <li><%= link_to t(".tests"), tests_path %></li>
 		  <% if signed_in? %>
-		    <li><%= link_to t(".setting"), edit_user_password_path  %></li>
+		    <li><%= link_to t(".user_info"), user_path(current_user)  %></li>
+		    <li><%= link_to t(".setting"), edit_user_registration_path  %></li>
 		    <li><%= link_to t(".signout"), sign_out_path, method: "delete" %></li>
 		  <% else %>
 		    <li><%= link_to t(".signin"), sign_in_path %></li>
 		  <% end %>
 		</ul>
-		<ul class="navbar-brand pull-right">
-		  <li><%= link_to t(".english"), locale:"en" %></li>
-	      <li><%= link_to t(".vietnamese"), locale:"vi" %></li>
-	    </ul>
 	  </nav>
     </div>
   </div>

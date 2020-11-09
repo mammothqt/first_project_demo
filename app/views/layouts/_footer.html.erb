@@ -1,9 +1,17 @@
 <footer class="footer">
   <nav>
-    <ul>
-      <li><%= link_to t(".help"), help_path %></li>
-	  <li><%= link_to t(".about"), about_path %></li>
-	  <li><%= link_to t(".contact"), contact_path %></li>
-	</ul>
+  	<div class="right-footer" %>
+      <ul>
+        <li><%= link_to t(".help"), help_path %></li>
+        <li><%= link_to t(".about"), about_path %></li>
+        <li><%= link_to t(".contact"), contact_path %></li>
+	  </ul>
+    </div>
+    <div class="left-footer" %>
+      <ul id="choose-language-button">
+	    <li><%= link_to t(".english"), locale:"en" %></li>
+	    <li><%= link_to t(".vietnamese"), locale:"vi" %></li>
+      </ul>
+    </div>
   </nav>
 </footer>

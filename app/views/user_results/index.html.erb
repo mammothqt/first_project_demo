@@ -12,7 +12,9 @@
   	  <th><%= t(".test_name") %></th>
   	  <th><%= t(".test_day") %></th>
   	  <th><%= t(".result") %></th>
+      <th><%= t(".grade") %></th>
   	</tr>
   	<%= render @user_results.includes(:user_answers) %>
   </table>
+  <%= will_paginate %>
 </div>

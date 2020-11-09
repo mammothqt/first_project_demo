@@ -23,18 +23,51 @@
   transform: translate(-50%, -50%);
 }
 
-#edit-name-text {
+#name-text {
   height: 75px;
 }
 
-#edit-description-text {
+#description-text {
   height: 150px;
 }
 
-#edit-description-field {
+#description-field {
   padding-top: 10px;
 }
 
 #test-description {
   text-align: center;
+}
+
+#question-attribute {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#question-label {
+  margin: 0;
+  -ms-transform: translate(0, -75%);
+  transform: translate(0, -75%);
+  margin-right: 10px;
+}
+
+#question-text {
+  border: 1px solid #ccc;
+  width: 85%;
+}
+
+#radio-button {
+  margin: 0;
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+
+#answer-attribute {
+  padding-bottom: 10px;
+}
+
+#answer-text {
+  border: 1px solid #ccc;
+  width: 50%;
 }
