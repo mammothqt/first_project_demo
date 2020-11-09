@@ -8,4 +8,15 @@ class User < ApplicationRecord
   validates :full_name, presence: true, length: { maximum: 50 }
   validates :admin, default: false
   validates :user_name, presence: true, uniqueness: { case_sensitive: false }
+
+  CSV_ATTRIBUTES = %w(full_name user_name email age gender).freeze
+
+  def self.to_csv
+    CSV.generate do |csv|
+      csv << column_names
+      all.each do |user|
+        csv << user.attributes.values_at(*column_names)
+      end
+    end
+  end
 end
