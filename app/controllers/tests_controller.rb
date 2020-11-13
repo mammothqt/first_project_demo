@@ -1,56 +1,57 @@
 class TestsController < ApplicationController
   load_and_authorize_resource
-  before_action :set_test, only: [:show, :edit, :update, :destroy]
+  before_action :load_test, only: [:show, :edit, :update, :destroy]
 
   def new
     @test = Test.new
-    10.times {
-	  @question = @test.questions.build
-      4.times { @answer = @question.answers.build }
+    Settings.test.number_question.times {
+	    @question = @test.questions.build
+      Settings.question.number_answer.times { @answer = @question.answers.build }
     }
   end
 
   def index
-    @tests = Test.all.paginate page: params[:page], per_page: 10
+    @tests = Test.newest.paginate(page: params[:page], per_page: Settings.item.default_number)
   end
 
   def show; end
 
   def create
-    @test = Test.create test_params
+    @test = Test.new(test_params)
 
     if @test.save
-      flash[:success] = "Test created!"
-      redirect_to test_path @test
+      flash[:success] = t('.test_create')
+      redirect_to test_path(@test)
     else
-	    render "new"
+	    render :new
     end
   end
 
   def edit; end
 
   def update
-    if @test.update test_params
-      flash[:success] = "Test has been update!"
-      render "show"
+    if @test.update(test_params)
+      flash[:success] = t('.test_update')
+      render :show
     else
-      render "edit"
+      render :edit
     end
   end
 
   def destroy
-    flash[:success] = "Test has been deleted!" if @test.destroy
+    flash[:success] = t('.test_delete') if @test.destroy
     redirect_to tests_path
   end
 
   private
+
   def test_params
     params.require(:test).permit(:id, :name, :description,
       questions_attributes: [:id, :content, :correct_answer_id, answers_attributes: [:id, :content]])
   end
 
-  def set_test
-    @test = Test.find_by_id params[:id]
+  def load_test
+    @test = Test.find_by(id: params[:id])
     redirect_to root_path if @test.nil?
   end
 end

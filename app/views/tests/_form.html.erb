@@ -1,37 +1,40 @@
-<%= form_with(model: test, local: true) do |form| %>
+<%= form_for @test do |form| %>
   <%= render 'shared/error_messages', object: form.object %>
-  <div class="row">
+  <div class='row'>
     <div>
-      <div class="col-md-10 col-md-offset-1 text-center">
-        <div class="field">
-          <%= form.label :name, t(".name") %>
-          <%= form.text_area :name, class: "form-control text-center", id: "name-text", maxlength: 150 %>
+      <div class='col-md-10 col-md-offset-1 text-center'>
+        <div class='field'>
+          <%= form.label :name, t('.name') %>
+          <%= form.text_area :name, class: 'form-control text-center',
+            id: 'name-text', maxlength: 150 %>
         </div>
 
-        <div class="field", id="edit-description-field">
-          <%= form.label :description, t(".description") %>
-          <%= form.text_area :description, class: "form-control text-center", id: "description-text", maxlength: 1500 %>
+        <div class='field', id='edit-description-field'>
+          <%= form.label :description, t('.description') %>
+          <%= form.text_area :description, class: 'form-control text-center',
+            id: 'description-text', maxlength: 1500 %>
         </div>
       </div>
 
-      <div class="col-md-7 col-md-offset-1">
+      <div class='col-md-7 col-md-offset-1'>
         <%= form.fields_for :questions do |f| %>
-          <div class="field" id="question-attribute">
-            <%= f.label :content, t(".question") + "#{f.index + 1}: ", id: "question-label" %>
-            <%= f.text_area :content, id: "question-text"%>
+          <div class='field' id='question-attribute'>
+            <%= f.label :content, t('.question') + "#{f.index + 1}: ", id: 'question-label' %>
+            <%= f.text_area :content, id: 'question-text'%>
           </div>
 
           <%= f.fields_for :answers do |u| %>
-            <div class="field" id="answer-attribute">
-              <%= f.radio_button :correct_answer_id, u.object.id, id: "radio-button" %>
-              <%= u.text_area :content, id: "answer-text" %>
+            <div class='field' id='answer-attribute'>
+              <%= f.radio_button :correct_answer_id, u.index, id: 'radio-button' %>
+              <%= f.label :content, t('.answer') + "#{u.index + 1}: ", id: 'question-label' %>
+              <%= u.text_area :content, id: 'answer-text' %>
             </div>
           <% end %>
         <% end %>
       </div>
 
-      <div class="actions col-md-10 col-md-offset-1 text-center">
-        <%= form.submit t(".submit"), class: "btn btn-primary" %>
+      <div class='actions col-md-10 col-md-offset-1 text-center'>
+        <%= form.submit t('.submit'), class: 'btn btn-primary' %>
       </div>
     </div>
   </div>

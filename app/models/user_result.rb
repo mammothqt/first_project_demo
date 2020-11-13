@@ -12,4 +12,8 @@ class UserResult < ApplicationRecord
   def test_name
   	test.name
   end
+
+  def grades
+    @grade ||= 0
+  end
 end

@@ -1,18 +1,19 @@
-<p id="notice"><%= notice %></p>
+<p id='notice'><%= notice %></p>
 
 <h1><%= @test.name %></h1>
-<p id="test-description"><%= @test.description %></p>
+<p id='test-description'><%= @test.description %></p>
 
-<div class="test-container">
+<div class='test-container'>
   <% if signed_in? %>
-    <div class="test-new-button">
-      <%= link_to t(".start"), new_user_test_user_result_path(current_user, @test), class: "btn btn-success btn-lg" %>
+    <div class='test-new-button'>
+      <%= link_to t('.start'), new_user_test_user_result_path(current_user, @test),
+        class: 'btn btn-success btn-lg' %>
     </div>
   <% end %>
 </div>
 
-<%= link_to t(".more"), tests_path, class: "btn btn-default" %>
+<%= link_to t('.more'), tests_path, class: 'btn btn-default' %>
 
-<% if can? :update, @test %>
-  <%= link_to t(".edit_test"), edit_test_path(@test), class: "btn btn-primary" %>
+<% if can? :update, Test %>
+  <%= link_to t('.edit_test'), edit_test_path(@test), class: 'btn btn-primary' %>
 <% end %>

@@ -1,9 +1,9 @@
-<h1><%= t(".title") %></h1>
+<h1><%= t('.title') %></h1>
 
-<%= render 'form', category: @category %>
+<%= render 'form' %>
 
-<% if can? :category, @category %>
-  <%= link_to t(".back"), category_courses_path(@category), class: "btn btn-default" %>
+<% if can? :category, Category %>
+  <%= link_to t('.back'), category_courses_path(@category), class: 'btn btn-default' %>
 <% end %>
 
-<%= link_to t(".categories"), categories_path, class: "btn btn-primary" %>
+<%= link_to t('.categories'), categories_path, class: 'btn btn-primary' %>
