@@ -52,7 +52,7 @@ vi:
         gender: "Giới tính"
         password: "Mật khẩu: (Để trống nếu bạn không muốn thay đổi)"
         password_confirmation: "Xác nhận mật khẩu"
-        current_password: "Mật khẩu hiện tại"
+        current_password: "Mật khẩu hiện tại: (Nhập mật khẩu hiện tại để xác nhận thay đổi)"
         update: "Cập nhật"
         edit_user: "Cập nhật thông tin"
     sessions:

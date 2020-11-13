@@ -92,6 +92,13 @@ en:
       submit: "Submit"
     category:
       delete: "Delete category"
+      sure: "Do you really want to delete this category?"
+    create:
+      category_create: "New category is created"
+    update:
+      category_update: "This category is updated"
+    destroy:
+      category_delete: "The category is deleted"
   courses:
     index:
       back: "Back"
@@ -100,6 +107,7 @@ en:
       delete: "Delete course"
     course:
       delete: "Delete course"
+      sure: "Do you really want to delete this course?"
     form:
       name: "Name"
       description: "Description"
@@ -114,10 +122,17 @@ en:
       back: "Back"
       edit_course: "Edit course"
       create_new_word: "Create new word"
+    create:
+      course_create: "New course is created"
+    update:
+      course_update: "This course is updated"
+    destroy:
+      course_delete: "The course is deleted"
   word_lists:
     word_list:
       edit: "Edit"
       delete: "Delete"
+      sure: "Are you sure to delete this word?"
     new:
       back: "Back"
     form:
@@ -126,6 +141,12 @@ en:
     edit:
       title: "Edit word"
       back: "Back"
+    create:
+      word_create: "New word is created"
+    update:
+      word_update: "Word is updated"
+    destroy:
+      word_delete: "The word is deleted"
   tests:
     index:
       test: "Tests"
@@ -150,9 +171,14 @@ en:
       edit_test: "Edit test"
     test:
       delete: "Delete test"
+      sure: "Are you sure to delete this test?"
+    create:
+      test_create: "New test is created"
+    update:
+      test_update: "This test is updated"
+    destroy:
+      test_delete: "The test is deleted"
   user_results:
-    new:
-      submit: "Submit"
     show:
       your_answer: "Your Answer"
       question: "Question"
@@ -162,12 +188,18 @@ en:
       num: "No"
       user_result: "Another Result"
       grade: "Your grade: "
+      doing_test_again: "Doing test again"
     index:
       num: "No"
       test_name: "Test"
       test_day: "Date of test"
       result: "Result"
       grade: "Grade"
+    form:
+      submit: "Submit"
+    create:
+      congratulation: "You have finished the test. This is your result."
+      warning: "You haven't answered all answered"
   users:
     index:
       user_list: "User List"

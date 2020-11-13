@@ -1,11 +1,13 @@
 <li>
   <h4>
-    <% if can? :update, word_list %>
-	  <%= link_to t(".edit"), edit_course_word_list_path(@course, word_list), class: "btn-primary btn-sm" %>
+    <% if can? :update, WordList %>
+	  <%= link_to t('.edit'), edit_course_word_list_path(@course, word_list),
+	    class: 'btn-primary btn-sm' %>
 	<% end %>
-	<% if can? :destroy, word_list %>
-	  <%= link_to t(".delete"), course_word_list_path(@course, word_list), method: :delete, confirm: "You sure?", class: "btn-danger btn-sm" %>
+	<% if can? :destroy, WordList %>
+	  <%= link_to t('.delete'), course_word_list_path(@course, word_list), method: :delete,
+	    confirm: t('.sure'), class: 'btn-danger btn-sm' %>
     <% end %>
-    <span class="name"><%= word_list.word%></span>
+    <span class='name'><%= word_list.word%></span>
   </h4>
 </li>

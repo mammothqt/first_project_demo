@@ -9,7 +9,9 @@ class User < ApplicationRecord
   validates :admin, default: false
   validates :user_name, presence: true, uniqueness: { case_sensitive: false }
 
-  CSV_ATTRIBUTES = %w(full_name user_name email age gender).freeze
+  CSV_ATTRIBUTES = %w(full_name user_name email age sex).freeze
+
+  enum sex: { hidden: 0, male: 1, female: 2 }
 
   def self.to_csv
     CSV.generate do |csv|

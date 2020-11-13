@@ -1,16 +1,16 @@
-<div class="intro">
-  <div class="row d-flex justify-content-center">
+<div class='intro'>
+  <div class='row d-flex justify-content-center'>
     <% unless signed_in? %>
-  	  <div id="main-text-home">
-	    <h1><%= t(".page_name") %></h1>
-	    <h2><%= t(".description") %></h2>
+  	  <div id='main-text-home'>
+	    <h1><%= t('.page_name') %></h1>
+	    <h2><%= t('.description') %></h2>
 	    <a>
-	  	  <%= link_to t(".sign_up"), new_user_registration_path, class: "btn btn-success btn-primary" %>
+	  	  <%= link_to t('.sign_up'), new_user_registration_path, class: 'btn btn-success btn-primary' %>
 	    </a>
 	  </div>
 	<% end %>
 	<% if can? :read, User %>
-	  <%= link_to t(".user_management"), users_path, class: "btn btn-success btn-primary" %>
+	  <%= link_to t('.user_management'), users_path, class: 'btn btn-success btn-primary' %>
 	<% end %>
   </div>
 </div>

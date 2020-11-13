@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
   before_action :authenticate_user!
-  before_action :set_user, only: [:destroy, :show]
+  before_action :load_user, only: [:destroy, :show]
 
   def index
-  	@users = User.all.paginate page: params[:page], per_page: Settings.user.index.number
+  	@users = User.all.paginate(page: params[:page], per_page: Settings.item.default_number)
 
     respond_to do |format|
       format.html
@@ -18,8 +18,9 @@ class UsersController < ApplicationController
   end
 
   private
-  def set_user
-  	@user = User.find params[:id]
-  	redirect_to users_path if @user.nil?
+
+  def load_user
+  	@user = User.find_by(id: params[:id])
+  	redirect_to users_path if @user.blank?
   end
 end

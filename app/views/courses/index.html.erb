@@ -1,18 +1,19 @@
-<p id="notice"><%= notice %></p>
+<p id='notice'><%= notice %></p>
 
 <h1><%= @category.name %></h1>
-<p id="category_description"><%= @category.description %></p>
+<p id='category_description'><%= @category.description %></p>
 
 <%= render @courses %>
 
 <%= will_paginate %>
 
-<div class="action-button">
-  <%= link_to t(".back"), categories_path, class: "btn btn-default" %>
-  <% if can? :update, @category %>
-    <%= link_to t(".edit_category"), edit_category_path(@category), class: "btn btn-primary" %>
+<div class='action-button'>
+  <%= link_to t('.back'), categories_path, class: 'btn btn-default' %>
+  <% if can? :update, Category %>
+    <%= link_to t('.edit_category'), edit_category_path(@category), class: 'btn btn-primary' %>
   <% end %>
-  <% if can? :create, @course %>
-    <%= link_to t(".new_course"), new_category_course_path(@category), class: "btn btn-success btn-primary" %>
+  <% if can? :create, Course %>
+    <%= link_to t('.new_course'), new_category_course_path(@category),
+      class: 'btn btn-success btn-primary' %>
   <% end %>
 </div>

@@ -91,6 +91,13 @@ vi:
       submit: "Cập nhật"
     category:
       delete: "Xóa thể loại"
+      sure: "Bạn có chắc chắn muốn xóa thể loại này?"
+    create:
+      category_create: "Thể loại mới đã được tạo"
+    update:
+      category_update: "Thể loại này đã được cập nhật"
+    destroy:
+      category_delete: "Thể loại đã bị xóa"
   courses:
     index:
       back: "Quay lại"
@@ -99,6 +106,7 @@ vi:
       delete: "Xóa khóa học"
     course:
       delete: "Xóa khóa học"
+      sure: "Bạn có chắc chắn muốn xóa khóa học này?"
     form:
       name: "Tên khóa học:"
       description: "Mô tả:"
@@ -113,10 +121,17 @@ vi:
       back: "Trở lại"
       edit_course: "Chỉnh sửa khóa học"
       create_new_word: "Tạo từ mới"
+    create:
+      course_create: "Khóa học mới đã được tạo"
+    update:
+      course_update: "Khóa học này đã được cập nhật"
+    destroy:
+      course_delete: "Khóa học đã bị xóa"
   word_lists:
     word_list:
       edit: "Sửa"
       delete: "Xóa"
+      sure: "Bạn có chắc chắn muốn xóa từ này?"
     new:
       back: "Trở lại"
     form:
@@ -125,6 +140,12 @@ vi:
     edit:
       title: "Sửa từ"
       back: "Trở lại"
+    create:
+      word_create: "Từ mới đã được tạo"
+    update:
+      word_update: "Từ đã được cập nhật"
+    destroy:
+      word_delete: "Từ đã bị xóa"
   tests:
     index:
       test: "Bài kiểm tra"
@@ -149,9 +170,14 @@ vi:
       edit_test: "Chỉnh sửa bài kiểm tra"
     test:
       delete: "Xóa bài kiểm tra"
+      sure: "Bạn có chắc chắn xóa bài kiểm tra?"
+    create:
+      test_create: "Bài kiểm tra mới đã được tạo"
+    update:
+      test_update: "Bài kiểm tra này đã được cập nhật"
+    destroy:
+      test_delete: "Bài kiểm tra đã bị xóa"
   user_results:
-    new:
-      submit: "Nộp bài"
     show:
       your_answer: "Đáp án của bạn"
       question: "Câu hỏi"
@@ -164,12 +190,18 @@ vi:
       status_result: "Bạn đã "
       pass: "đậu bài kiểm tra"
       fail: "rớt bài kiểm tra"
+      doing_test_again: "Làm lại bài kiểm tra"
     index:
       num: "STT"
       test_name: "Tên bài thi"
       test_day: "Ngày thi"
       result: "Kết quả"
       grade: "Điểm"
+    form:
+      submit: "Nộp bài"
+    create:
+      congratulation: "Chúc mừng bạn đã hoàn thành bài thi. Đây là kết quả của bạn."
+      warning: "Bạn chưa trả lời tất cả các câu hỏi"
   users:
     index:
       user_list: "Danh sách tài khoản"
@@ -205,6 +237,7 @@ vi:
     attributes:
       questions:
         content: "Nội dung câu hỏi"
+        correct_answer_id: "Đáp án đúng của câu hỏi"
         answers:
           content: "Nội dung câu trả lời"
       test:

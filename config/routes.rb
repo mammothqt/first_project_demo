@@ -22,16 +22,15 @@ Rails.application.routes.draw do
     end
 
     resources :courses do
-      resources :word_lists
+      resources :word_lists, except: :show
     end
 
-    resources :tests do
-      resources :questions
-    end
+    resources :tests
 
-    resources :users do
-      resources :tests do
-        resources :user_results, only: [:new, :create, :show]
+    resources :users, only: [] do
+      resources :tests, only: [] do
+        resources :user_results, only: [:create, :show]
+        resources :user_results, only: [:new], :path => 'doing_test'
       end
     end
 

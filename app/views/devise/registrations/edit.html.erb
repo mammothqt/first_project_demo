@@ -23,12 +23,12 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :gender, t(".gender") %>
-    <%= f.select :gender, [["Male", true], ["Female", false], ["Hidden", nil]], class: "form-control" %>
+    <%= f.label :sex, t(".gender") %>
+    <%= f.select :sex, User.sexes, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :password, t(".password:") %><br />
+    <%= f.label :password, t(".password") %><br />
     <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
   </div>
 

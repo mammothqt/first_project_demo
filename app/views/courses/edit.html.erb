@@ -1,6 +1,6 @@
-<h1><%= t(".title") %></h1>
+<h1><%= t('.title') %></h1>
 
-<%= render 'form', category: @category, course: @course %>
+<%= render 'form' %>
 
-<%= link_to t(".back"), category_course_path(@category, @course), class: "btn btn-default" %>
-<%= link_to t(".courses"), category_courses_path(@category), class: "btn btn-primary" %>
+<%= link_to t('.back'), category_course_path(@category, @course), class: 'btn btn-default' %>
+<%= link_to t('.courses'), category_courses_path(@category), class: 'btn btn-primary' %>

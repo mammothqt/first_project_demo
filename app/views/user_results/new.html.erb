@@ -1,28 +1,7 @@
-<p id="notice"><%= notice %></p>
+<p id='notice'><%= notice %></p>
 
 <h1><%= @test.name %></h1>
 
-<div class="span8", id="test-content">
-  <%= form_for([@user, @test, @user_result]) do |f| %>
-    <ol class="order-question">
-	  <% @test.questions.each do |question| %>
-	    <h3>
-	      <li><%= question.content %></li>
-	    </h3>
-
-	    <%= f.fields_for :user_answers do |u| %>
-	      <%= u.collection_radio_buttons(:user_answer, question.answers.all, :id, :content) do |b|%>
-		    <div class="display-answer">
-		      <%= b.radio_button %>
-		      <%= b.label %>
-		    </div>
-	      <% end %>
-	      <%= u.hidden_field :question_id, :value => question.id %>
-	    <% end %>
-      <% end %>
-    </ol>
-    <div class="actions", id="submit-button">
-      <%= f.submit t(".submit"), class: "btn btn-primary btn-lg", id: "submit-answer" %>
-    </div>
-  <% end %>
+<div class='span8', id='test-content'>
+  <%= render 'form' %>
 </div>

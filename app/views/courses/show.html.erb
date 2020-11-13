@@ -1,27 +1,29 @@
-<p id="notice"><%= notice %></p>
+<p id='notice'><%= notice %></p>
 
-<div class="row">
-  <aside class="span4">
+<div class='row'>
+  <aside class='span4'>
     <section>
 	    <h1><%= @course.name %></h1>
 	    <h2><%= @course.description %></h2>
 	  </section>
   </aside>
-  <div class="span8">
+  <div class='span8'>
     <% if @course.word_lists.any? %>
-	    <ol class="courses">
+	    <ol class='courses'>
 	      <%= render @course.word_lists %>
 	    </ol>
 	  <% end %>
   </div>
 </div>
 
-<%= link_to t(".back"), category_courses_path(@category), class: "btn btn-default" %>
+<%= link_to t('.back'), category_courses_path(@category), class: 'btn btn-default' %>
 
-<% if can? :update, @course %>
-  <%= link_to t(".edit_course"), edit_category_course_path(@category, @course), class: "btn btn-primary" %>
+<% if can? :update, Course %>
+  <%= link_to t('.edit_course'), edit_category_course_path(@category, @course),
+    class: 'btn btn-primary' %>
 <% end %>
 
-<% if can? :create, @word_list %>
-  <%= link_to t(".create_new_word"), new_course_word_list_path(@course), class: "btn btn-success btn-primary" %>
+<% if can? :create, WordList %>
+  <%= link_to t('.create_new_word'), new_course_word_list_path(@course),
+    class: 'btn btn-success btn-primary' %>
 <% end %>

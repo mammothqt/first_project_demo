@@ -1,35 +1,37 @@
-<p id="notice"><%= notice %></p>
+<p id='notice'><%= notice %></p>
 
-<div class="row">
-  <aside class="span4">
+<div class='row'>
+  <aside class='span4'>
     <section>
 	  <h1><%= @user_result.test_name %></h1>
 	  <h2>
-	    <%= t(".date_test") %>
-	    <%= @user_result.decorate.created_at_format %>
+	    <%= t('.date_test') %>
+	    <%= created_at_format(@user_result.created_at) %>
 	  </h2>
-	  <p class="user-result-grade">
-	  	<%= t(".grade") %>
+	  <h3 class='user-result-grade'>
+	  	<%= t('.grade') %>
 	  	<%= @user_result.grade %>
-	  </p>
-	  <p class="user-result-status">
-	  	<%= t(".status_result") %>
-	    <%= pass_or_fail(@user_result.status) %>
+	  </h3>
+	  <p class='user-result-status'>
+	  	<%= t('.status_result') %>
+	    <%= result_announcement(@user_result.status) %>
 	  </p>
 	</section>
   </aside>
   <table>
     <tr>
-  	  <th><%= t(".num") %></th>
-	  <th><%= t(".question") %></th>
-	  <th><%= t(".your_answer") %></th>
-	  <th><%= t(".correct_answer") %></th>
-	  <th><%= t(".result") %></th>
+  	  <th><%= t('.num') %></th>
+	  <th><%= t('.question') %></th>
+	  <th><%= t('.your_answer') %></th>
+	  <th><%= t('.correct_answer') %></th>
+	  <th><%= t('.result') %></th>
 	</tr>
 	<%= render @user_result.user_answers.includes(:answer) %>
   </table>
 </div>
 
-<div class="another-button" %>
-  <%= link_to t(".user_result"), user_user_results_path(@user), class: "btn btn-primary" %>
+<div class='another-button' %>
+  <%= link_to t('.user_result'), user_user_results_path(@user), class: 'btn btn-primary' %>
+  <%= link_to t('.doing_test_again'), new_user_test_user_result_path(current_user, @user_result.test),
+    class: 'btn btn-success btn-primary' %>
 </div>

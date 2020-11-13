@@ -52,7 +52,7 @@ en:
         gender: "Gender"
         password: "Password: (Leave blank if you don't want to change it)"
         password_confirmation: "Password Confirmation"
-        current_password: "Current Password"
+        current_password: "Current Password: (Enter current password to confirm your change)"
         update: "Update  profile"
         edit_user: "Edit Profile"
     sessions:
