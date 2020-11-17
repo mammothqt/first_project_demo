@@ -3,6 +3,7 @@
 <h1><%= t('.test') %></h1>
 
 <%= render @tests %>
+<%= render 'exports/index', model: :Test %>
 
 <%= will_paginate %>
 
@@ -13,7 +14,3 @@
     <% end %>
   </div>
 </div>
-
-<h1>Export csv</h1>
-<%= link_to t('.link_export'), export_tests_path(format: :csv) %>
-

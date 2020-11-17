@@ -15,7 +15,7 @@ class TestDecorator < Draper::Decorator
 
   private
   def arr_relationship_export objects, attributes, max_column_export
-    arr_relationship = objects.limit(10).map do |object|
+    arr_relationship = objects.map do |object|
       attributes.map do |attr|
         object.public_send(attr)
       end

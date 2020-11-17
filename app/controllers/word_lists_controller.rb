@@ -8,7 +8,7 @@ class WordListsController < ApplicationController
   end
 
   def index
-	  @word_list = @course.word_lists.all
+	  @word_list = @course.word_lists.newest
   end
 
   def create

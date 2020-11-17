@@ -8,9 +8,8 @@
 	  	  <%= link_to t('.sign_up'), new_user_registration_path, class: 'btn btn-success btn-primary' %>
 	    </a>
 	  </div>
-	<% end %>
-	<% if can? :read, User %>
-	  <%= link_to t('.user_management'), users_path, class: 'btn btn-success btn-primary' %>
+	<% else %>
+	  <%= render "users/user_info", user: current_user %>
 	<% end %>
   </div>
 </div>

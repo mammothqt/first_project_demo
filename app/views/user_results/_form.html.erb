@@ -1,23 +1,20 @@
-<%= form_for [@user, @test, @user_result] do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
+<%= form_for [@test, @user_result] do |f| %>
   <ol class='order-question'>
-    <% @test.questions.each do |question| %>
+    <%= f.fields_for :user_answers do |u| %>
       <h3>
-        <li><%= question.content %></li>
+        <li><%= @test.questions[u.index].content %></li>
 	    </h3>
 
-      <%= f.fields_for :user_answers do |u| %>
-        <%= u.collection_radio_buttons(:user_answer, question.answers.all, :id, :content) do |b|%>
-          <div class='display-answer'>
-            <%= b.radio_button %>
-            <%= b.label %>
-          </div>
-        <% end %>
+      <%= u.collection_radio_buttons(:answer_id, ans_by_question(@test, u.index), :id, :content) do |b| %>
+        <div class='display-answer'>
+          <%= b.radio_button %>
+          <%= b.label %>
+        </div>
       <% end %>
     <% end %>
   </ol>
 
-  <div class='actions', id='submit-button'>
+  <div class='actions' id='submit-button'>
     <%= f.submit t('.submit'), class: 'btn btn-primary btn-lg', id: 'submit-answer' %>
   </div>
 <% end %>

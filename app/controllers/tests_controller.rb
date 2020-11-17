@@ -6,7 +6,9 @@ class TestsController < ApplicationController
     @test = Test.new
     Settings.test.number_question.times {
 	    @question = @test.questions.build
-      Settings.question.number_answer.times { @answer = @question.answers.build }
+      Settings.question.number_answer.times {
+        @answer = @question.answers.build
+      }
     }
   end
 
@@ -23,7 +25,7 @@ class TestsController < ApplicationController
       flash[:success] = t('.test_create')
       redirect_to test_path(@test)
     else
-	    render :new
+      render :new
     end
   end
 
@@ -47,11 +49,12 @@ class TestsController < ApplicationController
 
   def test_params
     params.require(:test).permit(:id, :name, :description,
-      questions_attributes: [:id, :content, :correct_answer_id, answers_attributes: [:id, :content]])
+                                 questions_attributes: [:id, :content, :correct_answer_id,
+                                 answers_attributes: [:id, :content]])
   end
 
   def load_test
     @test = Test.find_by(id: params[:id])
-    redirect_to root_path if @test.nil?
+    redirect_to root_path if @test.blank?
   end
 end

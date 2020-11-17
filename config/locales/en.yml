@@ -32,219 +32,255 @@
 en:
   main_pages:
     home:
-      page_name: "GMO"
-      description: "On test-english.com you will find lots of free practice tests and
-        materials to help you improve your English skills™. If you don't know your level,
-        you can start by taking a Level Test."
-      sign_up: "Sign Up Now!"
-      categories: "Categories"
-      user_management: "User Management"
+      page_name: 'GMO'
+      description: 'You can start by taking a Level Test.'
+      sign_up: 'Sign Up Now!'
+      categories: 'Categories'
   layouts:
     footer:
-      about: "About |"
-      contact: "Contact"
-      help: "Help |"
-      english: "English |"
-      vietnamese: "Vietnamese"
+      about: 'About |'
+      contact: 'Contact'
+      help: 'Help |'
+      english: 'English |'
+      vietnamese: 'Vietnamese'
     header:
-      home: "Home"
-      user: "User"
-      signin: "Sign in"
-      account: "Account"
-      categories: "Categories"
-      tests: "Tests"
-      setting: "Setting"
-      signout: "Log out"
-      user_info: "User Information"
+      home: 'Home'
+      user: 'User'
+      signin: 'Sign in'
+      account: 'Account'
+      categories: 'Categories'
+      tests: 'Tests'
+      setting: 'Setting'
+      signout: 'Log out'
+      user_info: 'User Information'
+      user_management: 'User Management'
   devise:
     registrations:
       new:
-        sign_up: "SIGN UP"
-        email: "Email:"
-        user_name: "User Name:"
-        full_name: "Full Name:"
-        password: "Password:"
-        password_confirmation: "Password Confirmation:"
-        submit: "Submit"
-        character_min: " character minimum"
+        sign_up: 'SIGN UP'
+        email: 'Email:'
+        user_name: 'User Name:'
+        full_name: 'Full Name:'
+        password: 'Password:'
+        password_confirmation: 'Password Confirmation:'
+        submit: 'Submit'
+        character_min: ' character minimum'
+      edit:
+        hidden: 'Not Given'
+        male: 'Male'
+        female: 'Female'
     sessions:
       new:
-        log_in: "LOG IN"
-        user_name: "User name:"
-        password: "Password:"
-        remember_me: "Remember me"
-        submit: "Log in"
+        log_in: 'LOG IN'
+        user_name: 'User name:'
+        password: 'Password:'
+        remember_me: 'Remember me'
+        submit: 'Log in'
   categories:
     index:
-      categories: "Categories"
-      new_category: "Create new category"
-      delete: "Delete"
+      categories: 'Categories'
+      new_category: 'Create new category'
+      delete: 'Delete'
     new:
-      back: "Back"
-      new_category: "New category"
+      back: 'Back'
+      new_category: 'New category'
     edit:
-      back: "Back"
-      categories: "Categories"
-      title: "Edit Category"
+      back: 'Back'
+      categories: 'Categories'
+      title: 'Edit Category'
+      not_found: 'Category is not existed'
     form:
-      name: "Name"
-      description: "Description"
-      submit: "Submit"
+      name: 'Name'
+      description: 'Description'
+      submit: 'Submit'
     category:
-      delete: "Delete category"
-      sure: "Do you really want to delete this category?"
+      delete: 'Delete category'
+      sure: 'Do you really want to delete this category?'
     create:
-      category_create: "New category is created"
+      category_create: 'New category is created'
     update:
-      category_update: "This category is updated"
+      category_update: 'This category is updated'
     destroy:
-      category_delete: "The category is deleted"
+      category_delete: 'The category is deleted'
   courses:
     index:
-      back: "Back"
-      edit_category: "Edit category"
-      new_course: "New course"
-      delete: "Delete course"
+      back: 'Back'
+      edit_category: 'Edit category'
+      new_course: 'New course'
+      delete: 'Delete course'
     course:
-      delete: "Delete course"
-      sure: "Do you really want to delete this course?"
+      delete: 'Delete course'
+      sure: 'Do you really want to delete this course?'
     form:
-      name: "Name"
-      description: "Description"
-      submit: "Submit"
+      name: 'Name'
+      description: 'Description'
+      submit: 'Submit'
     edit:
-      title: "Edit course"
-      back: "Back"
-      courses: "Courses"
+      title: 'Edit course'
+      back: 'Back'
+      courses: 'Courses'
+      not_found: 'Course is not existed'
     new:
-      back: "Back"
+      back: 'Back'
     show:
-      back: "Back"
-      edit_course: "Edit course"
-      create_new_word: "Create new word"
+      back: 'Back'
+      edit_course: 'Edit course'
+      create_new_word: 'Create new word'
+      not_found: 'Course is not existed'
     create:
-      course_create: "New course is created"
+      course_create: 'New course is created'
     update:
-      course_update: "This course is updated"
+      course_update: 'This course is updated'
     destroy:
-      course_delete: "The course is deleted"
+      course_delete: 'The course is deleted'
   word_lists:
     word_list:
-      edit: "Edit"
-      delete: "Delete"
-      sure: "Are you sure to delete this word?"
+      edit: 'Edit'
+      delete: 'Delete'
+      sure: 'Are you sure to delete this word?'
     new:
-      back: "Back"
+      back: 'Back'
     form:
-      word: "Word:"
-      submit: "Submit"
+      word: 'Word:'
+      submit: 'Submit'
     edit:
-      title: "Edit word"
-      back: "Back"
+      title: 'Edit word'
+      back: 'Back'
+      not_found: 'Word is not found'
     create:
-      word_create: "New word is created"
+      word_create: 'New word is created'
     update:
-      word_update: "Word is updated"
+      word_update: 'Word is updated'
     destroy:
-      word_delete: "The word is deleted"
+      word_delete: 'The word is deleted'
   tests:
     index:
-      test: "Tests"
-      delete: "Delete"
-      new_test: "Create new test"
+      test: 'Tests'
+      delete: 'Delete'
+      new_test: 'Create new test'
     edit:
-      back: "Back"
-      tests: "Tests"
-      edit: "Edit Test"
+      back: 'Back'
+      tests: 'Tests'
+      edit: 'Edit Test'
+      not_found: 'Test is not existed'
     new:
-      back: "Back"
-      new_test: "New test"
+      back: 'Back'
+      new_test: 'New test'
     form:
-      name: "Test Name: "
-      description: "Description: "
-      question: "Question "
-      answer: "Answer "
-      submit: "Submit"
+      name: 'Test Name: '
+      description: 'Description: '
+      question: 'Question %{index}'
+      answer: 'Answer %{index}'
+      submit: 'Submit'
     show:
-      start: "Start the test"
-      more: "Tests"
-      edit_test: "Edit test"
+      start: 'Start the test'
+      more: 'Tests'
+      edit_test: 'Edit test'
+      not_found: 'The test is not existed'
     test:
-      delete: "Delete test"
-      sure: "Are you sure to delete this test?"
+      delete: 'Delete test'
+      sure: 'Are you sure to delete this test?'
     create:
-      test_create: "New test is created"
+      test_create: 'New test is created'
     update:
-      test_update: "This test is updated"
+      test_update: 'This test is updated'
     destroy:
-      test_delete: "The test is deleted"
+      test_delete: 'The test is deleted'
   user_results:
     show:
-      your_answer: "Your Answer"
-      question: "Question"
-      correct_answer: "Correct Answer"
-      result: "Result"
-      date_test: "Test Day"
-      num: "No"
-      user_result: "Another Result"
-      grade: "Your grade: "
-      doing_test_again: "Doing test again"
+      your_answer: 'Your Answer'
+      question: 'Question'
+      correct_answer: 'Correct Answer'
+      result: 'Result'
+      date_test: 'Test Day'
+      num: 'No'
+      user_result: 'Another Result'
+      grade: 'Your grade: '
+      status_result: 'You are '
+      pass: 'pass the test'
+      fail: 'fail the test'
+      doing_test_again: 'Doing test again'
+      not_found: 'Result is not existed'
     index:
-      num: "No"
-      test_name: "Test"
-      test_day: "Date of test"
-      result: "Result"
-      grade: "Grade"
+      num: 'No'
+      test_name: 'Test'
+      test_day: 'Date of test'
+      result: 'Result'
+      grade: 'Grade'
     form:
-      submit: "Submit"
+      submit: 'Submit'
     create:
-      congratulation: "You have finished the test. This is your result."
-      warning: "You haven't answered all answered"
+      congratulation: 'You have finished the test. This is your result'
+      warning: 'You have to finish all questions'
   users:
     index:
-      user_list: "User List"
-      num: "No"
-      user_full_name: "User Name"
+      user_list: 'User List'
+      num: 'No'
+      user_full_name: 'User Name'
     user:
-      delete: "Delete user"
+      delete: 'Delete user'
+      confirm: 'Are you sure to delete this account?'
+    user_info:
+      email: 'Email'
+      age: 'Age'
+      gender: 'Gender'
+      female: 'Female'
+      male: 'Male'
+      user_result: 'User Result'
+      hidden: 'Not given'
+    destroy:
+      user_delete: 'Account has been deleted'
     show:
-      email: "Email"
-      age: "Age"
-      gender: "Gender"
-      female: "Female"
-      male: "Male"
-      user_result: "User Result"
+      not_found: 'Account is not existed'
+  exports:
+    index:
+      link_export: 'Export file csv'
   header_csv:
-    full_name: "Full Name"
-    user_name: "User Name"
-    email: "Email"
-    age: "Age"
-    gender: "Sex"
-    arr_user_results: "User Result"
-    name: "Test Name"
-    description: "Test Description"
-    arr_questions: "Questions"
-    question_content: "Question"
+    full_name: 'Full Name'
+    user_name: 'User Name'
+    email: 'Email'
+    age: 'Age'
+    gender: 'Sex'
+    arr_user_results: 'User Result'
+    name: 'Test Name'
+    description: 'Test Description'
+    arr_questions: 'Questions'
+    question_content: 'Question'
   will_paginate:
-    previous_label: "Previous page"
-    next_label: "Next page"
+    previous_label: 'Previous page'
+    next_label: 'Next page'
   shared:
     error_messages:
-      error_alert: "Error is existed:"
+      error_alert: 'Error is existed:'
   activerecord:
     attributes:
       questions:
-        content: "Question content"
-        answers:
-          content: "Answer content"
+        content: 'Question content'
+        correct_answer_id: 'Correct answer of question'
+      questions/answers:
+        content: 'Answer content'
       test:
-        name: "Test name"
-        description: "Test description"
+        name: 'Test name'
+        description: 'Test description'
       category:
-        name: "Category name"
-        description: "Category description"
+        name: 'Category name'
+        description: 'Category description'
       course:
-        name: "Course name"
-        description: "Course description"
+        name: 'Course name'
+        description: 'Course description'
       word_list:
-        word: "Word"
+        word: 'Word'
+      user:
+        user_name: 'User name'
+        current_password: 'Current password'
+        full_name: 'Full name'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+    errors:
+      models:
+        question:
+          attributes:
+            correct_answer_id:
+              blank: 'have not selected yet'
+  unauthorized:
+    default: 'You do not have permission to access this page'

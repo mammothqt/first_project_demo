@@ -1,4 +1,5 @@
 class DataCsv
+
   def initialize attributes, candidate
     @attributes = attributes
     @candidate = candidate

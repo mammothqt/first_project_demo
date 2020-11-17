@@ -1,11 +1,37 @@
 item:
   default_number: 10
-test:
-  number_question: 2
-question:
-  number_answer: 4
 user_result:
   default_number: 20
+  pass_grade: 5
+answer:
+  content:
+    max_length: 100
+category:
+  name:
+    max_length: 50
+  description:
+    max_length: 500
+course:
+  name:
+    max_length: 50
+  description:
+    max_length: 500
+question:
+  content:
+    max_length: 150
+  number_answer: 4
+test:
+  name:
+    max_length: 50
+  description:
+    max_length: 500
+  number_question: 2
+user:
+  full_name:
+    max_length: 50
+word_list:
+  word:
+    max_length: 100
 questions: questions
 decorate_questions:
   - question_content
