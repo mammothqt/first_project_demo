@@ -32,222 +32,255 @@
 vi:
   main_pages:
     home:
-      page_name: "GMO"
-      description: "Tiếng Anh cho mọi người"
-      sign_up: "Đăng ký ngay!"
-      categories: "Thể loại"
-      user_management: "Quản lý tài khoản"
+      page_name: 'GMO'
+      description: 'Tiếng Anh cho mọi người'
+      sign_up: 'Đăng ký ngay!'
+      categories: 'Thể loại'
   layouts:
     footer:
-      about: "Về chúng tôi |"
-      contact: "Liên lạc"
-      help: "Trợ giúp |"
-      english: "Tiếng Anh |"
-      vietnamese: "Tiếng Việt"
+      about: 'Về chúng tôi |'
+      contact: 'Liên lạc'
+      help: 'Trợ giúp |'
+      english: 'Tiếng Anh |'
+      vietnamese: 'Tiếng Việt'
     header:
-      page_name: "GOM TPV"
-      home: "Trang chủ"
-      user: "Tài khoản"
-      signin: "Đăng nhập"
-      account: "Tài khoản"
-      categories: "Thể loại"
-      tests: "Bài kiểm tra"
-      setting: "Cập nhật"
-      signout: "Đăng xuất"
-      user_info: "Thông tin tài khoản"
+      page_name: 'GOM TPV'
+      home: 'Trang chủ'
+      user: 'Tài khoản'
+      signin: 'Đăng nhập'
+      account: 'Tài khoản'
+      categories: 'Thể loại'
+      tests: 'Bài kiểm tra'
+      setting: 'Cập nhật'
+      signout: 'Đăng xuất'
+      user_info: 'Thông tin tài khoản'
+      user_management: 'Quản lý tài khoản'
   devise:
     registrations:
       new:
-        sign_up: "ĐĂNG KÝ:"
-        email: "Email:"
-        user_name: "Tài khoản:"
-        full_name: "Họ và tên:"
-        password: "Mật khẩu:"
-        password_confirmation: "Xác nhận mật khẩu:"
-        submit: "Đăng ký"
-        character_min: " ký tự tối thiểu"
+        sign_up: 'ĐĂNG KÝ:'
+        email: 'Email:'
+        user_name: 'Tài khoản:'
+        full_name: 'Họ và tên:'
+        password: 'Mật khẩu:'
+        password_confirmation: 'Xác nhận mật khẩu:'
+        submit: 'Đăng ký'
+        character_min: ' ký tự tối thiểu'
+      edit:
+        hidden: 'Không tiết lộ'
+        male: 'Nam'
+        female: 'Nữ'
     sessions:
       new:
-        log_in: "ĐĂNG NHẬP"
-        user_name: "Tài khoản:"
-        password: "Mật khẩu:"
-        remember_me: "Nhớ tài khoản"
-        submit: "Đăng nhập"
+        log_in: 'ĐĂNG NHẬP'
+        user_name: 'Tài khoản:'
+        password: 'Mật khẩu:'
+        remember_me: 'Nhớ tài khoản'
+        submit: 'Đăng nhập'
   categories:
     index:
-      categories: "Thể loại"
-      new_category: "Tạo thể loại mới"
-      delete: "Xóa"
+      categories: 'Thể loại'
+      new_category: 'Tạo thể loại mới'
+      delete: 'Xóa'
     new:
-      back: "Trở lại"
-      new_category: "Tạo thể loại mới"
+      back: 'Trở lại'
+      new_category: 'Tạo thể loại mới'
     edit:
-      back: "Trở lại"
-      categories: "Thể loại khác"
-      title: "Sửa thể loại"
+      back: 'Trở lại'
+      categories: 'Thể loại khác'
+      title: 'Sửa thể loại'
+      not_found: 'Thể loại khôn tồn tại'
     form:
-      name: "Tên thể loại:"
-      description: "Mô tả:"
-      submit: "Cập nhật"
+      name: 'Tên thể loại:'
+      description: 'Mô tả:'
+      submit: 'Cập nhật'
     category:
-      delete: "Xóa thể loại"
-      sure: "Bạn có chắc chắn muốn xóa thể loại này?"
+      delete: 'Xóa thể loại'
+      sure: 'Bạn có chắc chắn muốn xóa thể loại này?'
     create:
-      category_create: "Thể loại mới đã được tạo"
+      category_create: 'Thể loại mới đã được tạo'
     update:
-      category_update: "Thể loại này đã được cập nhật"
+      category_update: 'Thể loại này đã được cập nhật'
     destroy:
-      category_delete: "Thể loại đã bị xóa"
+      category_delete: 'Thể loại đã bị xóa'
   courses:
     index:
-      back: "Quay lại"
-      edit_category: "Sửa thể loại"
-      new_course: "Khóa học mới"
-      delete: "Xóa khóa học"
+      back: 'Quay lại'
+      edit_category: 'Sửa thể loại'
+      new_course: 'Khóa học mới'
+      delete: 'Xóa khóa học'
     course:
-      delete: "Xóa khóa học"
-      sure: "Bạn có chắc chắn muốn xóa khóa học này?"
+      delete: 'Xóa khóa học'
+      sure: 'Bạn có chắc chắn muốn xóa khóa học này?'
     form:
-      name: "Tên khóa học:"
-      description: "Mô tả:"
-      submit: "Cập nhật khóa học"
+      name: 'Tên khóa học:'
+      description: 'Mô tả:'
+      submit: 'Cập nhật khóa học'
     edit:
-      title: "Sửa khóa học"
-      back: "Trở lại"
-      courses: "Khóa học khác"
+      title: 'Sửa khóa học'
+      back: 'Trở lại'
+      courses: 'Khóa học khác'
+      not_found: 'Khóa học không tồn tại'
     new:
-      back: "Trở lại"
+      back: 'Trở lại'
     show:
-      back: "Trở lại"
-      edit_course: "Chỉnh sửa khóa học"
-      create_new_word: "Tạo từ mới"
+      back: 'Trở lại'
+      edit_course: 'Chỉnh sửa khóa học'
+      create_new_word: 'Tạo từ mới'
     create:
-      course_create: "Khóa học mới đã được tạo"
+      course_create: 'Khóa học mới đã được tạo'
     update:
-      course_update: "Khóa học này đã được cập nhật"
+      course_update: 'Khóa học này đã được cập nhật'
     destroy:
-      course_delete: "Khóa học đã bị xóa"
+      course_delete: 'Khóa học đã bị xóa'
   word_lists:
     word_list:
-      edit: "Sửa"
-      delete: "Xóa"
-      sure: "Bạn có chắc chắn muốn xóa từ này?"
+      edit: 'Sửa'
+      delete: 'Xóa'
+      sure: 'Bạn có chắc chắn muốn xóa từ này?'
     new:
-      back: "Trở lại"
+      back: 'Trở lại'
     form:
-      word: "Từ:"
-      submit: "Xác nhận"
+      word: 'Từ:'
+      submit: 'Xác nhận'
     edit:
-      title: "Sửa từ"
-      back: "Trở lại"
+      title: 'Sửa từ'
+      back: 'Trở lại'
+      not_found: 'Từ không tồn tại'
     create:
-      word_create: "Từ mới đã được tạo"
+      word_create: 'Từ mới đã được tạo'
     update:
-      word_update: "Từ đã được cập nhật"
+      word_update: 'Từ đã được cập nhật'
     destroy:
-      word_delete: "Từ đã bị xóa"
+      word_delete: 'Từ đã bị xóa'
   tests:
     index:
-      test: "Bài kiểm tra"
-      delete: "Xóa"
-      new_test: "Tạo bài kiểm tra mới"
+      test: 'Bài kiểm tra'
+      delete: 'Xóa'
+      new_test: 'Tạo bài kiểm tra mới'
     edit:
-      back: "Trở lại"
-      tests: "Bài kiểm tra khác"
-      edit: "Chỉnh sửa bài kiểm tra"
+      back: 'Trở lại'
+      tests: 'Bài kiểm tra khác'
+      edit: 'Chỉnh sửa bài kiểm tra'
+      not_found: 'Bài kiểm tra không tồn tại'
     new:
-      back: "Trở lại"
-      new_test: "Bài kiểm tra mới"
+      back: 'Trở lại'
+      new_test: 'Bài kiểm tra mới'
     form:
-      name: "Tên bài kiểm tra: "
-      description: "Mô tả bài kiểm tra: "
-      question: "Câu hỏi "
-      answer: "Đáp án "
-      submit: "Xác nhận"
+      name: 'Tên bài kiểm tra: '
+      description: 'Mô tả bài kiểm tra: '
+      question: 'Câu hỏi %{index}:'
+      answer: 'Đáp án %{index}:'
+      submit: 'Xác nhận'
     show:
-      start: "Bắt đầu kiểm tra"
-      more: "Bài kiểm tra khác"
-      edit_test: "Chỉnh sửa bài kiểm tra"
+      start: 'Bắt đầu kiểm tra'
+      more: 'Bài kiểm tra khác'
+      edit_test: 'Chỉnh sửa bài kiểm tra'
+      not_found: 'Bài kiểm tra không tồn tại'
     test:
-      delete: "Xóa bài kiểm tra"
-      sure: "Bạn có chắc chắn xóa bài kiểm tra?"
+      delete: 'Xóa bài kiểm tra'
+      sure: 'Bạn có chắc chắn xóa bài kiểm tra?'
     create:
-      test_create: "Bài kiểm tra mới đã được tạo"
+      test_create: 'Bài kiểm tra mới đã được tạo'
     update:
-      test_update: "Bài kiểm tra này đã được cập nhật"
+      test_update: 'Bài kiểm tra này đã được cập nhật'
     destroy:
-      test_delete: "Bài kiểm tra đã bị xóa"
+      test_delete: 'Bài kiểm tra đã bị xóa'
   user_results:
     show:
-      your_answer: "Đáp án của bạn"
-      question: "Câu hỏi"
-      correct_answer: "Đáp án đúng"
-      result: "Kết quả"
-      date_test: "Ngày thi: "
-      num: "STT"
-      user_result: "Kết quả khác"
-      grade: "Điểm của bạn: "
-      status_result: "Bạn đã "
-      pass: "đậu bài kiểm tra"
-      fail: "rớt bài kiểm tra"
-      doing_test_again: "Làm lại bài kiểm tra"
+      your_answer: 'Đáp án của bạn'
+      question: 'Câu hỏi'
+      correct_answer: 'Đáp án đúng'
+      result: 'Kết quả'
+      date_test: 'Ngày thi: '
+      num: 'STT'
+      user_result: 'Kết quả khác'
+      grade: 'Điểm của bạn: '
+      status_result: 'Bạn đã '
+      pass: 'đậu bài kiểm tra'
+      fail: 'rớt bài kiểm tra'
+      doing_test_again: 'Làm lại bài kiểm tra'
+      not_found: 'Kết quả không tồn tại'
     index:
-      num: "STT"
-      test_name: "Tên bài thi"
-      test_day: "Ngày thi"
-      result: "Kết quả"
-      grade: "Điểm"
+      num: 'STT'
+      test_name: 'Tên bài thi'
+      test_day: 'Ngày thi'
+      result: 'Kết quả'
+      grade: 'Điểm'
     form:
-      submit: "Nộp bài"
+      submit: 'Nộp bài'
     create:
-      congratulation: "Chúc mừng bạn đã hoàn thành bài thi. Đây là kết quả của bạn."
-      warning: "Bạn chưa trả lời tất cả các câu hỏi"
+      congratulation: 'Chúc mừng bạn đã hoàn thành bài thi. Đây là kết quả của bạn.'
+      warning: 'Bạn chưa trả lời tất cả các câu hỏi'
   users:
     index:
-      user_list: "Danh sách tài khoản"
-      num: "STT"
-      user_full_name: "Tên tài khoản"
+      user_list: 'Danh sách tài khoản'
+      num: 'STT'
+      user_full_name: 'Tên tài khoản'
     user:
-      delete: "Xóa tài khoản"
+      delete: 'Xóa tài khoản'
+      confirm: 'Bạn có chắc chắn muốn xóa tài khoản này?'
+    user_info:
+      email: 'Email'
+      age: 'Tuổi'
+      gender: 'Giới tính'
+      female: 'Nữ'
+      male: 'Nam'
+      user_result: 'Kết quả thi'
+      hidden: 'Không tiết lộ'
+    destroy:
+      user_delete: 'Tài khoản đã bị xóa'
     show:
-      email: "Email"
-      age: "Tuổi"
-      gender: "Giới tính"
-      female: "Nữ"
-      male: "Nam"
-      user_result: "Kết quả thi"
+      not_found: 'Tài khoản không tồn tại'
+  exports:
+    index:
+      link_export: 'Xuất file pdf'
   header_csv:
-    full_name: "Họ và tên"
-    user_name: "Tài khoản"
-    email: "Email"
-    age: "Tuổi"
-    gender: "Giới tính"
-    arr_user_results: "Kết quả thi"
-    name: "Tên bài kiểm tra"
-    description: "Mô tả bài kiểm tra"
-    arr_questions: "Câu hỏi"
-    question_content: "Câu hỏi"
+    full_name: 'Họ và tên'
+    user_name: 'Tài khoản'
+    email: 'Email'
+    age: 'Tuổi'
+    gender: 'Giới tính'
+    arr_user_results: 'Kết quả thi'
+    name: 'Tên bài kiểm tra'
+    description: 'Mô tả bài kiểm tra'
+    arr_questions: 'Câu hỏi'
+    question_content: 'Câu hỏi'
   will_paginate:
-    previous_label: "Trang trước"
-    next_label: "Trang sau"
+    previous_label: 'Trang trước'
+    next_label: 'Trang sau'
   shared:
     error_messages:
-      error_alert: "Xuất hiện lỗi:"
+      error_alert: 'Xuất hiện lỗi:'
   activerecord:
     attributes:
       questions:
-        content: "Nội dung câu hỏi"
-        correct_answer_id: "Đáp án đúng của câu hỏi"
-        answers:
-          content: "Nội dung câu trả lời"
+        content: 'Nội dung câu hỏi'
+        correct_answer_id: 'Đáp án đúng của câu hỏi'
+      questions/answers:
+        content: 'Nội dung câu trả lời'
       test:
-        name: "Tên bài kiểm tra"
-        description: "Mô tả bài kiểm tra"
+        name: 'Tên bài kiểm tra'
+        description: 'Mô tả bài kiểm tra'
       category:
-        name: "Tên thể loại"
-        description: "Mô tả"
+        name: 'Tên thể loại'
+        description: 'Mô tả'
       course:
-        name: "Tên khóa học"
-        description: "Mô tả"
+        name: 'Tên khóa học'
+        description: 'Mô tả'
       word_list:
-        word: "Từ"
+        word: 'Từ'
+      user:
+        user_name: 'Tài khoản'
+        current_password: 'Mật khẩu hiện tại'
+        full_name: 'Họ và tên'
+        password: 'Mật khẩu'
+        password_confirmation: 'Xác nhận mật khẩu'
+    errors:
+      models:
+        question:
+          attributes:
+            correct_answer_id:
+              blank: 'chưa được chọn'
+  unauthorized:
+    default: 'Bạn không có quyền truy cập trang này'

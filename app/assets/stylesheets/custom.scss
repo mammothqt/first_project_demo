@@ -103,6 +103,8 @@ textarea {
   resize: none;
 }
 
+/* alert */
+
 #error_explanation {
   color: #f00;
   border: 2px red;
@@ -120,7 +122,7 @@ textarea {
   }
 }
 
-.alert.alert-error {
+.alert.alert-error, .alert-alert {
   position: relative;
   text-align: left;
   font-weight: bold;
@@ -131,4 +133,24 @@ textarea {
   color: #fff;
 }
 
-.field_with_errors { display: inline; }
+.alert-notice, .alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+ }
+
+.field_with_errors {
+  display: inline;
+  label:after {
+    content: ' *';
+    color: red;
+  }
+}
+
+/* export */
+
+.btn-warning {
+  float: right;
+  margin-top: 10px;
+}

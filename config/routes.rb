@@ -17,7 +17,7 @@ Rails.application.routes.draw do
       delete "sign_out" => "devise/sessions#destroy"
     end
 
-    resources :categories do
+    resources :categories, except: :show do
       resources :courses
     end
 
@@ -25,21 +25,15 @@ Rails.application.routes.draw do
       resources :word_lists, except: :show
     end
 
-    resources :tests
-
-    resources :users, only: [] do
-      resources :tests, only: [] do
-        resources :user_results, only: [:create, :show]
-        resources :user_results, only: [:new], :path => 'doing_test'
-      end
+    resources :tests do
+      resources :user_results, only: :create
+      resources :user_results, only: :new, :path => 'doing_test'
     end
 
     resources :users do
       resources :user_results, only: [:index, :show]
     end
 
-    resources :export_users, only: :index
-
-    resources :export_tests, only: :index
+    resources :exports, only: :index
   end
 end

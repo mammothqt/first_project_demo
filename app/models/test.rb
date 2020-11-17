@@ -4,12 +4,14 @@ class Test < ApplicationRecord
 
   accepts_nested_attributes_for :questions, allow_destroy: true
 
-  validates :name, presence: true, length: { maximum: 50 }
-  validates :description, length: { maximum: 500 }
+  validates :name, presence: true, length: { maximum: Settings.test.name.max_length }
+  validates :description, length: { maximum: Settings.test.description.max_length }
 
-  CSV_ATTRIBUTES = %w(name description questions).freeze
+  def self.attribute_export
+    ExportCsv::RowFormat::ATTRIBUTE_EXPORT_TEST_CSV
+  end
 
-  def number_question_test
+  def number_question
     questions.count
   end
 end

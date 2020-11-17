@@ -4,7 +4,7 @@
     <p><%= test.description %></p>
     <% if can? :destroy, Test %>
       <%= link_to t('.delete'), test, method: :delete, data: { confirm: t('.sure') },
-        class: 'btn btn-danger btn-primary btn-sm' %>
+                  class: 'btn btn-danger btn-primary btn-sm' %>
     <% end %>
   </div>
 </div>

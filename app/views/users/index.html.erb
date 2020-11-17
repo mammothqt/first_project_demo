@@ -3,21 +3,19 @@
 <div class='row'>
   <aside class='span4'>
     <section>
-	  <h1><%= t('.user_list') %></h1>
-	</section>
+	    <h1>
+        <%= t('.user_list') %>
+      </h1>
+	  </section>
   </aside>
   <table>
   	<tr>
   	  <th><%= t('.num') %></th>
   	  <th><%= t('.user_full_name') %></th>
   	  <th></th>
-  	</tr>
-  	<%= render @users %>
+    </tr>
+    <%= render @users %>
   </table>
+  <%= render 'exports/index', model: :User %>
   <%= will_paginate %>
 </div>
-
-<%= link_to 'Export', users_path(format: 'xls') %>
-
-<h1>Export csv</h1>
-<%= link_to t('.link_export'), export_users_path(format: :csv) %>

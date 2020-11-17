@@ -2,9 +2,9 @@
   <td><span class='mycount'></span></td>
   <td><%= link_to user.full_name, user %></td>
   <td>
-    <% if can? :destroy, @user %>
-      <%= link_to t('.delete'), user_path(user), method: :Delete, confirm: t('.confirm'),
-        class: 'btn btn-danger btn-primary btn-sm' %>
+    <% if can? :destroy, User %>
+      <%= link_to t('.delete'), user_path(user), method: :delete,
+        data: { confirm: t('.confirm') }, class: 'btn btn-danger btn-primary btn-sm' %>
     <% end %>
   </td>
 </tr>

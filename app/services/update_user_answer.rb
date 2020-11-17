@@ -1,17 +1,20 @@
 class UpdateUserAnswer
-  def initialize user_answers
+
+  def initialize(user_answers)
     @user_answers = user_answers
   end
 
   def perform
-  	@user_answers.each do |user_answer|
-  	  user_answer.update(is_correct: user_answer_correct?(user_answer))
-  	end
+    user_answers.each do |answer|
+      answer.update!(is_correct: correct?(answer))
+    end
   end
 
   private
 
-  def user_answer_correct? user_answer
-    user_answer.answer == user_answer.correct_answer(user_answer.question_correct_answer_id)
+  attr_reader(:user_answers)
+
+  def correct?(choice)
+    choice.answer == choice.correct_answer
   end
 end

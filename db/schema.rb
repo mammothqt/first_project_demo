@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_11_035025) do
+ActiveRecord::Schema.define(version: 2020_11_16_095519) do
 
   create_table "answers", force: :cascade do |t|
     t.text "content"
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_11_11_035025) do
     t.integer "user_result_id"
     t.boolean "is_correct"
     t.integer "question_id"
-    t.integer "user_answer"
+    t.integer "answer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

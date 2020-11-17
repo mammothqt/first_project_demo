@@ -6,8 +6,7 @@
 <div class='test-container'>
   <% if signed_in? %>
     <div class='test-new-button'>
-      <%= link_to t('.start'), new_user_test_user_result_path(current_user, @test),
-        class: 'btn btn-success btn-lg' %>
+      <%= link_to t('.start'), new_test_user_result_path(@test), class: 'btn btn-success btn-lg' %>
     </div>
   <% end %>
 </div>

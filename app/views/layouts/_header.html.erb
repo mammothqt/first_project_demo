@@ -7,8 +7,12 @@
 		  <li><%= link_to t(".categories"), categories_path %></li>
 		  <li><%= link_to t(".tests"), tests_path %></li>
 		  <% if signed_in? %>
-		    <li><%= link_to t(".user_info"), user_path(current_user)  %></li>
-		    <li><%= link_to t(".setting"), edit_user_registration_path  %></li>
+		    <% if can? :read, User %>
+	          <li>
+	          	<%= link_to t('.user_management'), users_path %>
+	          </li>
+	        <% end %>
+	        <li><%= link_to t(".setting"), edit_user_registration_path  %></li>
 		    <li><%= link_to t(".signout"), sign_out_path, method: "delete" %></li>
 		  <% else %>
 		    <li><%= link_to t(".signin"), sign_in_path %></li>
