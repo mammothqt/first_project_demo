@@ -196,9 +196,6 @@ vi:
       num: 'STT'
       user_result: 'Kết quả khác'
       grade: 'Điểm của bạn: '
-      status_result: 'Bạn đã '
-      pass: 'đậu bài kiểm tra'
-      fail: 'rớt bài kiểm tra'
       doing_test_again: 'Làm lại bài kiểm tra'
       not_found: 'Kết quả không tồn tại'
     index:
@@ -235,6 +232,12 @@ vi:
   exports:
     index:
       link_export: 'Xuất file pdf'
+      not_found: 'Không tồn tại'
+      Category: 'Thể_loại_%{date}.csv'
+      Course: 'Khóa_học_%{date}.csv'
+      Test: 'Bài_kiểm_tra_%{date}.csv'
+      UserResult: 'Kết_quả_kiểm_tra_%{date}.csv'
+      User: 'Người_dùng_%{date}.csv'
   header_csv:
     full_name: 'Họ và tên'
     user_name: 'Tài khoản'
@@ -246,6 +249,12 @@ vi:
     description: 'Mô tả bài kiểm tra'
     arr_questions: 'Câu hỏi'
     question_content: 'Câu hỏi'
+    user_sex: 'Giới tính'
+    test_name: 'Tên bài kiểm tra'
+    created_at: 'Thời gian thi'
+    grade: 'Điểm'
+    result_announcement: 'Kết quả'
+    number_correct: 'Số câu trả lời đúng'
   will_paginate:
     previous_label: 'Trang trước'
     next_label: 'Trang sau'
@@ -276,6 +285,14 @@ vi:
         full_name: 'Họ và tên'
         password: 'Mật khẩu'
         password_confirmation: 'Xác nhận mật khẩu'
+        sexes:
+          hidden: 'Không tiết lộ'
+          male: 'Nam'
+          female: 'Nữ'
+      user_result:
+        statuses:
+          pass: 'Bạn đã đậu bài kiểm tra'
+          fail: 'Bạn đã rớt bài kiểm tra'
     errors:
       models:
         question:

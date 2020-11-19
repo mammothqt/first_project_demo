@@ -196,9 +196,6 @@ en:
       num: 'No'
       user_result: 'Another Result'
       grade: 'Your grade: '
-      status_result: 'You are '
-      pass: 'pass the test'
-      fail: 'fail the test'
       doing_test_again: 'Doing test again'
       not_found: 'Result is not existed'
     index:
@@ -235,6 +232,7 @@ en:
   exports:
     index:
       link_export: 'Export file csv'
+      not_found: 'Not existed'
   header_csv:
     full_name: 'Full Name'
     user_name: 'User Name'
@@ -246,6 +244,12 @@ en:
     description: 'Test Description'
     arr_questions: 'Questions'
     question_content: 'Question'
+    user_sex: 'Sex'
+    test_name: 'Test Name'
+    created_at: 'Test Time'
+    grade: 'Grade'
+    result_announcement: 'Result'
+    number_correct: 'Number of Correct Answer'
   will_paginate:
     previous_label: 'Previous page'
     next_label: 'Next page'
@@ -276,6 +280,14 @@ en:
         full_name: 'Full name'
         password: 'Password'
         password_confirmation: 'Password confirmation'
+        sexes:
+          hidden: 'Not Given'
+          male: 'Male'
+          female: 'Female'
+      user_result:
+        statuses:
+          pass: 'You have passed the test'
+          fail: 'You have failed the test'
     errors:
       models:
         question:

@@ -1,11 +1,11 @@
 class DataCsv
 
-  def initialize attributes, candidate
+  def initialize(attributes, candidate)
     @attributes = attributes
     @candidate = candidate
   end
 
-  def perform
+  def performs
     attributes.inject([]) do |arr, attr|
       if candidate.public_send(attr).is_a?(Array)
         candidate.public_send(attr).each { |value| arr << value }

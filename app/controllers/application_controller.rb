@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+
   def configure_permitted_parameters
     update_attrs = [:email, :age, :sex, :full_name]
     signup_attrs = [:email, :age, :full_name]

@@ -3,7 +3,7 @@ namespace :data do
   task create_user: :environment do
     User.create! full_name: "Tran Quoc Trung", user_name: "mammoth",
       email: "quoctrungtran256@gmail.com", age: 26, password: "123456", admin: true
-  	20.times do |n|
+    20.times do |n|
   	  User.create!(full_name: Faker::Name.name,
   				 user_name: Faker::Name.name,
   				 email: Faker::Internet.email,

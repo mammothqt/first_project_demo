@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
   before_action :load_user, only: [:destroy, :show]
   load_and_authorize_resource
 
   def index
-  	@users = User.all.paginate(page: params[:page], per_page: Settings.item.default_number)
+  	@users = User.newest.paginate(page: params[:page], per_page: Settings.item.default_number)
   end
 
   def destroy

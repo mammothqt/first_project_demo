@@ -3,19 +3,17 @@
 <div class='row'>
   <aside class='span4'>
     <section>
-	    <h1>
-        <%= t('.user_list') %>
-      </h1>
-	  </section>
+      <h1><%= t('.user_list') %></h1>
+    </section>
   </aside>
   <table>
-  	<tr>
-  	  <th><%= t('.num') %></th>
-  	  <th><%= t('.user_full_name') %></th>
-  	  <th></th>
+    <tr>
+      <th><%= t('.num') %></th>
+      <th><%= t('.user_full_name') %></th>
+      <th></th>
     </tr>
     <%= render @users %>
   </table>
-  <%= render 'exports/index', model: :User %>
   <%= will_paginate %>
+  <%= render 'exports/index', model: @users.klass, id: nil %>
 </div>

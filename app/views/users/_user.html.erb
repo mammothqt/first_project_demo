@@ -4,7 +4,7 @@
   <td>
     <% if can? :destroy, User %>
       <%= link_to t('.delete'), user_path(user), method: :delete,
-        data: { confirm: t('.confirm') }, class: 'btn btn-danger btn-primary btn-sm' %>
+                  data: { confirm: t('.confirm') }, class: 'btn btn-danger btn-primary btn-sm' %>
     <% end %>
   </td>
 </tr>
