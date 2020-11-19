@@ -8,7 +8,7 @@ class Test < ApplicationRecord
   validates :description, length: { maximum: Settings.test.description.max_length }
 
   def self.attribute_export
-    ExportCsv::RowFormat::ATTRIBUTE_EXPORT_TEST_CSV
+    ExportCsv::ExportFormat::ATTRIBUTE_EXPORT_TEST_CSV
   end
 
   def number_question

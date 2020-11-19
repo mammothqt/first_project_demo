@@ -10,7 +10,7 @@ module UserResultsHelper
   end
 
   def result_announcement(status)
-    status ? t('.pass') : t('.fail')
+    I18n.t("activerecord.attributes.user_result.statuses.#{status}")
   end
 
   def format_date_slash(time)

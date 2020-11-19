@@ -14,6 +14,6 @@ class UpdateUserResult
   attr_reader(:user_result)
 
   def result_status(grade)
-    grade > Settings.user_result.pass_grade ? true : false
+    grade > Settings.user_result.pass_grade ? :pass : :fail
   end
 end

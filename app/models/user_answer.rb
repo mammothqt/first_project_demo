@@ -5,6 +5,8 @@ class UserAnswer < ApplicationRecord
   delegate :question, to: :answer
   delegate :content, to: :answer, prefix: :answer
 
+  validates :is_correct, default: false
+
   def question_content
   	question.content
   end

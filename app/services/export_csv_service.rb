@@ -1,9 +1,10 @@
 require "csv"
 
 class ExportCsvService
-  def initialize(model)
-    @attribute_export = model.attribute_export
-    @objects = model.limit(1).decorate
+
+  def initialize(objects)
+    @objects = objects.decorate
+    @attribute_export = objects.klass.attribute_export
   end
 
   def perform
@@ -23,8 +24,8 @@ class ExportCsvService
     end
   end
 
-  def push_line object
-    data_export = DataCsv.new(attribute_export, object).perform
+  def push_line(object)
+    data_export = DataCsv.new(attribute_export, object).performs
     csv << data_export
   end
 end

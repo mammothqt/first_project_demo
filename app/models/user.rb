@@ -12,6 +12,14 @@ class User < ApplicationRecord
   enum sex: { hidden: 0, male: 1, female: 2 }
 
   def self.attribute_export
-    ExportCsv::RowFormat::ATTRIBUTE_EXPORT_USER_CSV
+    ExportCsv::ExportFormat::ATTRIBUTE_EXPORT_USER_CSV
+  end
+
+  def attribute_objects
+    user_results
+  end
+
+  def user_sex
+    I18n.t("activerecord.attributes.user.sexes.#{self.sex}")
   end
 end
