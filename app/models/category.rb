@@ -10,6 +10,6 @@ class Category < ApplicationRecord
   end
 
   def attribute_objects
-  	courses
+  	courses.newest
   end
 end

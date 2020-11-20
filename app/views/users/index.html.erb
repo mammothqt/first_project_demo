@@ -15,5 +15,5 @@
     <%= render @users %>
   </table>
   <%= will_paginate %>
-  <%= render 'exports/index', model: @users.klass, id: nil %>
+  <%= render 'exports/index', model: @users.klass, owner: nil %>
 </div>

@@ -16,17 +16,16 @@ class ExportsController < ApplicationController
   private
 
   def load_objects
-    if params[:id]
-      load_owner
-      @objects = @owner.attribute_objects
-    else
-      @objects = params[:model].constantize.newest
-    end
+    @objects = params[:owner] ? find_by_owner : find_by_params
   end
 
-  def load_owner
-    @owner = ExportCsv::ExportFormat::MODEL_RELATIONSHIP_EXPORT[params[:model].to_sym]
-                       .find_by(id: params[:id])
+  def find_by_owner
+    @owner = params[:owner][:model].constantize.find_by(id: params[:owner][:id])
     raise ActiveRecord::RecordNotFound if @owner.blank?
+    @owner.attribute_objects
+  end
+
+  def find_by_params
+    params[:objects][:model].constantize.newest
   end
 end

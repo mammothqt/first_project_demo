@@ -1,4 +1,3 @@
 <% if can? :read, ExportsController %>
-  <%= link_to t('.link_export'), exports_path(format: :csv, model: model, id: id),
-              class: 'btn btn-warning' %>
+  <%= link_to t('.link_export'), export_path(model, owner), class: 'btn btn-warning' %>
 <% end %>

@@ -16,7 +16,7 @@ class User < ApplicationRecord
   end
 
   def attribute_objects
-    user_results
+    user_results.newest
   end
 
   def user_sex
