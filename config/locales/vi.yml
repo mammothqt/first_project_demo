@@ -350,3 +350,11 @@ vi:
               invalid: 'đã hết hạn'
   unauthorized:
     default: 'Bạn không có quyền truy cập trang này'
+  mailer:
+    subject:
+      user_result: 'Chúc mừng %{name} đã vượt qua bài test %{test}'
+  user_mailer:
+    congrat_passed_user:
+      greeting: 'Xin chào %{name}'
+      congrat: 'Bạn đã vượt qua bài test %{test_name} với số điểm %{grade}'
+      another_test: 'Hãy tiếp tục với những bài test khác. Chúc bạn may mắn'

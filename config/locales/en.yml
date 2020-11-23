@@ -349,3 +349,12 @@ en:
               invalid: 'has expired'
   unauthorized:
     default: 'You do not have permission to access this page'
+  mailer:
+    subject:
+      user_result: 'Congratulation! %{name} had passed %{test} test'
+  user_mailer:
+    congrat_passed_user:
+      greeting: 'Hello %{name}'
+      congrat: 'You have pass %{test_name} Test with %{grade} grade'
+      another_test: 'Continue with other tests. Best wish for you.'
+

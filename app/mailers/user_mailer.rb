@@ -13,8 +13,10 @@ class UserMailer < ActionMailer::Base
     devise_mail(record, :reset_password_instructions, opts)
   end
 
-  def unlock_instructions(record, token, opts={})
-    @token = token
-    devise_mail(record, :unlock_instructions, opts)
+  def congrat_passed_user(user, test, grade)
+    @user = user
+    @test = test
+    @grade = grade
+    mail(to: @user.email, subject: t('mailer.subject.user_result', name: @user.full_name, test: @test.name))
   end
 end
