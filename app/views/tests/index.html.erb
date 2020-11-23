@@ -3,7 +3,10 @@
 <h1><%= t('.test') %></h1>
 
 <%= render @tests %>
-<%= render 'exports/index', model: @tests.klass, id: nil %>
+
+<% unless @tests.blank? %>
+  <%= render 'exports/index', model: @tests.klass, owner: nil %>
+<% end %>
 
 <%= will_paginate %>
 

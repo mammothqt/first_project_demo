@@ -17,5 +17,6 @@ class DataCsv
   end
 
   private
-  attr_reader :attributes, :candidate
+
+  attr_reader(:attributes, :candidate)
 end

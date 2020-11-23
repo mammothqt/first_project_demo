@@ -4,7 +4,10 @@
 <p id='category_description'><%= @category.description %></p>
 
 <%= render @courses %>
-<%= render 'exports/index', model: @courses.klass, id: @category.id %>
+
+<% unless @courses.blank? %>
+  <%= render 'exports/index', model: @courses.klass, owner: @category %>
+<% end %>
 
 <%= will_paginate %>
 

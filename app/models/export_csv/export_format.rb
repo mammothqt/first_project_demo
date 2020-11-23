@@ -16,7 +16,5 @@ class ExportCsv::ExportFormat
 
   ATTRIBUTES_QUESTION = %w(content).freeze
 
-  MODEL_RELATIONSHIP_EXPORT = { Course: Category, UserResult: User }.freeze
-
   MODEL_DECORATOR_EXPORT = %w(Test).freeze
 end

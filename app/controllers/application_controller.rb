@@ -8,8 +8,9 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, :alert => exception.message
   end
 
-  rescue_from(ActiveRecord::RecordNotFound) do
-    redirect_to root_path, :alert => t(".not_found")
+  rescue_from(ActiveRecord::RecordNotFound) do |exception|
+    redirect_to root_path, :alert => t('.not_found',
+                            model: I18n.t("activerecord.attributes.#{exception.model.downcase}.itself"))
   end
 
   protected

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get '/about', to: 'main_pages#about'
     get '/contact', to: 'main_pages#contact'
 
-    devise_for :users
+    devise_for :users, controllers: { confirmations: 'confirmations' }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
     as :user do
       get 'sign_in' => 'devise/sessions#new'

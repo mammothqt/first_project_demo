@@ -16,6 +16,8 @@
   	</tr>
   	<%= render @user_results.includes(:user_answers) %>
   </table>
-  <%= render 'exports/index', model: @user_results.klass, id: @user.id %>
+  <% unless @user_results.blank? %>
+    <%= render 'exports/index', model: @user_results.klass, owner: @user %>
+  <% end %>
   <%= will_paginate %>
 </div>

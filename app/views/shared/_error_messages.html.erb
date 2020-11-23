@@ -1,12 +1,12 @@
 <% if object.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-error">
-	  <%= t(".error_alert") %>
-	</div>
-	<ol>
-	  <% object.errors.full_messages.each do |msg| %>
-	    <li><%= msg %></li>
-	  <% end %>
-	</ol>
+      <%= t(".error_alert") %>
+    </div>
+    <ol>
+      <% object.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ol>
   </div>
 <% end %>

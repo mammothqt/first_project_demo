@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable, :rememberable, :validatable
+  # :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable, :rememberable,
+         :validatable, :confirmable, :recoverable
 
   has_many :user_results, dependent: :destroy
 
@@ -16,7 +17,7 @@ class User < ApplicationRecord
   end
 
   def attribute_objects
-    user_results
+    user_results.newest
   end
 
   def user_sex

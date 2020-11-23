@@ -1,5 +1,6 @@
 item:
   default_number: 10
+  default_export: 10
 user_result:
   default_number: 20
   pass_grade: 5

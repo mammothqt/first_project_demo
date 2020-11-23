@@ -77,6 +77,25 @@ vi:
         password: 'Mật khẩu:'
         remember_me: 'Nhớ tài khoản'
         submit: 'Đăng nhập'
+    shared:
+      links:
+        sign_up: 'Đăng ký'
+        forgot_password: 'Quên mật khẩu'
+        not_receive_mail: 'Không nhận được email?'
+    confirmations:
+      new:
+        resend_email: 'Gửi lại email xác nhận'
+        resend_confirmation: 'Xác nhận'
+    passwords:
+      new:
+        forgot_password: 'Quên mật khẩu'
+        send_instructions: 'Gửi hướng dẫn lấy lại mật khẩu'
+      edit:
+        change_password: 'Thay đổi mật khẩu'
+        new_password: 'Mật khẩu mới'
+        confirm_new_password: 'Xác nhận mật khẩu mới'
+        change_password: 'Thay đổi mật khẩu'
+        minimun_password: "(Tối thiểu %{min} ký tự)"
   categories:
     index:
       categories: 'Thể loại'
@@ -89,7 +108,7 @@ vi:
       back: 'Trở lại'
       categories: 'Thể loại khác'
       title: 'Sửa thể loại'
-      not_found: 'Thể loại khôn tồn tại'
+      not_found: '%{model} không tồn tại'
     form:
       name: 'Tên thể loại:'
       description: 'Mô tả:'
@@ -120,13 +139,14 @@ vi:
       title: 'Sửa khóa học'
       back: 'Trở lại'
       courses: 'Khóa học khác'
-      not_found: 'Khóa học không tồn tại'
+      not_found: '%{model} không tồn tại'
     new:
       back: 'Trở lại'
     show:
       back: 'Trở lại'
       edit_course: 'Chỉnh sửa khóa học'
       create_new_word: 'Tạo từ mới'
+      not_found: '%{model} không tồn tại'
     create:
       course_create: 'Khóa học mới đã được tạo'
     update:
@@ -146,7 +166,7 @@ vi:
     edit:
       title: 'Sửa từ'
       back: 'Trở lại'
-      not_found: 'Từ không tồn tại'
+      not_found: '%{model} không tồn tại'
     create:
       word_create: 'Từ mới đã được tạo'
     update:
@@ -162,7 +182,7 @@ vi:
       back: 'Trở lại'
       tests: 'Bài kiểm tra khác'
       edit: 'Chỉnh sửa bài kiểm tra'
-      not_found: 'Bài kiểm tra không tồn tại'
+      not_found: '%{model} không tồn tại'
     new:
       back: 'Trở lại'
       new_test: 'Bài kiểm tra mới'
@@ -176,7 +196,7 @@ vi:
       start: 'Bắt đầu kiểm tra'
       more: 'Bài kiểm tra khác'
       edit_test: 'Chỉnh sửa bài kiểm tra'
-      not_found: 'Bài kiểm tra không tồn tại'
+      not_found: '%{model} không tồn tại'
     test:
       delete: 'Xóa bài kiểm tra'
       sure: 'Bạn có chắc chắn xóa bài kiểm tra?'
@@ -197,7 +217,7 @@ vi:
       user_result: 'Kết quả khác'
       grade: 'Điểm của bạn: '
       doing_test_again: 'Làm lại bài kiểm tra'
-      not_found: 'Kết quả không tồn tại'
+      not_found: '%{model} không tồn tại'
     index:
       num: 'STT'
       test_name: 'Tên bài thi'
@@ -228,11 +248,23 @@ vi:
     destroy:
       user_delete: 'Tài khoản đã bị xóa'
     show:
-      not_found: 'Tài khoản không tồn tại'
+      not_found: '%{model} không tồn tại'
+    mailer:
+      confirmation_instructions:
+        subject: "Hướng dẫn xác nhận tài khoản"
+        greeting: 'Xin chào %{email}'
+        instruction: 'Hãy bấm vào link dưới đây để hoàn thành xác nhận'
+        confirm_account: 'Xác nhận tài khoản'
+      reset_password_instructions:
+        subject: 'Hướng dẫn thay đổi mật khẩu tài khoản'
+        greeting: 'Xin chào %{email}'
+        instruction: 'Chúng tôi đã nhận được yêu cầu thay đổi mật khẩu của bạn.
+          Vui lòng bấm vào đường link phía dưới để tiến hành thay đổi mật khẩu'
+        reset_password: 'Thay đổi mật khẩu'
   exports:
     index:
       link_export: 'Xuất file pdf'
-      not_found: 'Không tồn tại'
+      not_found: '%{model} không tồn tại'
       Category: 'Thể_loại_%{date}.csv'
       Course: 'Khóa_học_%{date}.csv'
       Test: 'Bài_kiểm_tra_%{date}.csv'
@@ -271,20 +303,28 @@ vi:
       test:
         name: 'Tên bài kiểm tra'
         description: 'Mô tả bài kiểm tra'
+        itself: 'Bài kiểm tra'
       category:
         name: 'Tên thể loại'
         description: 'Mô tả'
+        itself: 'Thể loại'
       course:
         name: 'Tên khóa học'
         description: 'Mô tả'
+        itself: 'Khóa học'
       word_list:
         word: 'Từ'
+      wordlist:
+        itself: 'Từ'
       user:
         user_name: 'Tài khoản'
         current_password: 'Mật khẩu hiện tại'
         full_name: 'Họ và tên'
         password: 'Mật khẩu'
         password_confirmation: 'Xác nhận mật khẩu'
+        email: 'Địa chỉ email'
+        reset_password_token: 'Yêu cầu thay đổi mật khẩu'
+        itself: 'Tài khoản'
         sexes:
           hidden: 'Không tiết lộ'
           male: 'Nam'
@@ -293,11 +333,20 @@ vi:
         statuses:
           pass: 'Bạn đã đậu bài kiểm tra'
           fail: 'Bạn đã rớt bài kiểm tra'
+      userresult:
+        itself: 'Kết quả thi'
     errors:
       models:
         question:
           attributes:
             correct_answer_id:
               blank: 'chưa được chọn'
+        user:
+          attributes:
+            email:
+              already_confirmed: 'đã được xác nhận. Vui lòng đăng nhập để tiếp tục'
+              not_found: 'không tìm thấy'
+            reset_password_token:
+              invalid: 'đã hết hạn'
   unauthorized:
     default: 'Bạn không có quyền truy cập trang này'
