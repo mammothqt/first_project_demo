@@ -76,6 +76,25 @@ en:
         password: 'Password:'
         remember_me: 'Remember me'
         submit: 'Log in'
+    shared:
+      links:
+        sign_up: 'Sign up'
+        forgot_password: 'Forgot password'
+        not_receive_mail: 'Dont receive mail confirmation?'
+    confirmations:
+      new:
+        resend_email: 'Resend confirmation email'
+        resend_confirmation: 'Submit'
+    passwords:
+      new:
+        forgot_password: 'Forgot Password'
+        send_instructions: 'Send reset password instruction'
+      edit:
+        change_password: 'Change Password'
+        new_password: 'New password'
+        confirm_new_password: 'Confirm new password'
+        change_password: 'Change password'
+        minimun_password: "(%{min} character minimum)"
   categories:
     index:
       categories: 'Categories'
@@ -88,7 +107,7 @@ en:
       back: 'Back'
       categories: 'Categories'
       title: 'Edit Category'
-      not_found: 'Category is not existed'
+      not_found: '%{model} is not existed'
     form:
       name: 'Name'
       description: 'Description'
@@ -119,14 +138,14 @@ en:
       title: 'Edit course'
       back: 'Back'
       courses: 'Courses'
-      not_found: 'Course is not existed'
+      not_found: '%{model} is not existed'
     new:
       back: 'Back'
     show:
       back: 'Back'
       edit_course: 'Edit course'
       create_new_word: 'Create new word'
-      not_found: 'Course is not existed'
+      not_found: '%{model} is not existed'
     create:
       course_create: 'New course is created'
     update:
@@ -162,7 +181,7 @@ en:
       back: 'Back'
       tests: 'Tests'
       edit: 'Edit Test'
-      not_found: 'Test is not existed'
+      not_found: '%{model} is not existed'
     new:
       back: 'Back'
       new_test: 'New test'
@@ -176,7 +195,7 @@ en:
       start: 'Start the test'
       more: 'Tests'
       edit_test: 'Edit test'
-      not_found: 'The test is not existed'
+      not_found: '%{model} is not existed'
     test:
       delete: 'Delete test'
       sure: 'Are you sure to delete this test?'
@@ -197,7 +216,7 @@ en:
       user_result: 'Another Result'
       grade: 'Your grade: '
       doing_test_again: 'Doing test again'
-      not_found: 'Result is not existed'
+      not_found: '%{model} is not existed'
     index:
       num: 'No'
       test_name: 'Test'
@@ -228,11 +247,28 @@ en:
     destroy:
       user_delete: 'Account has been deleted'
     show:
-      not_found: 'Account is not existed'
+      not_found: '%{model} is not existed'
+    mailer:
+      confirmation_instructions:
+        subject: "Confirmation instructions"
+        greeting: 'Hello %{email}'
+        instruction: 'Please enter the follow link to finish your declaration'
+        confirm_account: 'Confirm'
+      reset_password_instructions:
+        subject: 'Reset password instruction'
+        greeting: 'Hello %{email},'
+        instruction: 'We have receive your reset password request.
+          Please click the link below to change your password'
+        reset_password: 'Change your password'
   exports:
     index:
       link_export: 'Export file csv'
-      not_found: 'Not existed'
+      not_found: '%{model} not existed'
+      Category: 'Category_%{date}.csv'
+      Course: 'Course_%{date}.csv'
+      Test: 'Test_%{date}.csv'
+      UserResult: 'User_Result_%{date}.csv'
+      User: 'User_%{date}.csv'
   header_csv:
     full_name: 'Full Name'
     user_name: 'User Name'
@@ -266,20 +302,28 @@ en:
       test:
         name: 'Test name'
         description: 'Test description'
+        itself: 'Test'
       category:
         name: 'Category name'
         description: 'Category description'
+        itself: 'Category'
       course:
         name: 'Course name'
         description: 'Course description'
+        itself: 'Course'
       word_list:
         word: 'Word'
+      wordlist:
+        itself: 'Word'
       user:
         user_name: 'User name'
         current_password: 'Current password'
         full_name: 'Full name'
         password: 'Password'
         password_confirmation: 'Password confirmation'
+        email: 'Your email address'
+        reset_password_token: 'Reset password request'
+        itself: 'User'
         sexes:
           hidden: 'Not Given'
           male: 'Male'
@@ -288,11 +332,20 @@ en:
         statuses:
           pass: 'You have passed the test'
           fail: 'You have failed the test'
+      userresult:
+        itself: 'User Result'
     errors:
       models:
         question:
           attributes:
             correct_answer_id:
               blank: 'have not selected yet'
+        user:
+          attributes:
+            email:
+              already_confirmed: 'was already confirmed. Please sign in to continue.'
+              not_found: 'was not found'
+            reset_password_token:
+              invalid: 'has expired'
   unauthorized:
     default: 'You do not have permission to access this page'

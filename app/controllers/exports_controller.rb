@@ -20,8 +20,7 @@ class ExportsController < ApplicationController
   end
 
   def find_by_owner
-    @owner = params[:owner][:model].constantize.find_by(id: params[:owner][:id])
-    raise ActiveRecord::RecordNotFound if @owner.blank?
+    @owner = params[:owner][:model].constantize.find_by!(id: params[:owner][:id])
     @owner.attribute_objects
   end
 
