@@ -3,7 +3,7 @@ item:
   default_export: 10
 user_result:
   default_number: 20
-  pass_grade: 5
+  pass_grade: 2
 answer:
   content:
     max_length: 100

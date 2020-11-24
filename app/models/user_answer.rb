@@ -8,7 +8,7 @@ class UserAnswer < ApplicationRecord
   validates :is_correct, default: false
 
   def question_content
-  	question.content
+    question.content
   end
 
   def question_correct_answer_id

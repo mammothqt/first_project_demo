@@ -36,6 +36,12 @@ en:
       description: 'You can start by taking a Level Test.'
       sign_up: 'Sign Up Now!'
       categories: 'Categories'
+    about:
+      about: 'About us'
+      about_us: 'We contribute a lot of courses and tests for you'
+    contact:
+      contact: 'Contact'
+      find_us: 'Please contact us through phone number: 0905.123456'
   layouts:
     footer:
       about: 'About |'
@@ -54,6 +60,8 @@ en:
       signout: 'Log out'
       user_info: 'User Information'
       user_management: 'User Management'
+    application:
+      title: 'Learning English with GMO'
   devise:
     registrations:
       new:
@@ -141,6 +149,7 @@ en:
       not_found: '%{model} is not existed'
     new:
       back: 'Back'
+      title: 'New course'
     show:
       back: 'Back'
       edit_course: 'Edit course'
@@ -159,6 +168,7 @@ en:
       sure: 'Are you sure to delete this word?'
     new:
       back: 'Back'
+      title: 'Create new word'
     form:
       word: 'Word:'
       submit: 'Submit'
@@ -196,6 +206,7 @@ en:
       more: 'Tests'
       edit_test: 'Edit test'
       not_found: '%{model} is not existed'
+      signin_to_test: 'Please sign in to continue'
     test:
       delete: 'Delete test'
       sure: 'Are you sure to delete this test?'
@@ -330,8 +341,8 @@ en:
           female: 'Female'
       user_result:
         statuses:
-          pass: 'You have passed the test'
-          fail: 'You have failed the test'
+          pass: 'Passed the test'
+          fail: 'Failed the test'
       userresult:
         itself: 'User Result'
     errors:
@@ -349,3 +360,11 @@ en:
               invalid: 'has expired'
   unauthorized:
     default: 'You do not have permission to access this page'
+  mailer:
+    subject:
+      user_result: 'Congratulation! %{name} had passed %{test} test'
+  user_mailer:
+    congrat_passed_user:
+      greeting: 'Hello %{name}'
+      congrat: 'You have pass %{test_name} Test with %{grade} grade'
+      another_test: 'Continue with other tests. Best wish for you.'

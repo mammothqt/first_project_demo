@@ -3,18 +3,17 @@
 <div class='row'>
   <aside class='span4'>
     <section>
-	    <h1><%= @user.full_name %></h1>
-	  </section>
+      <h1><%= @user.full_name %></h1>
+    </section>
   </aside>
   <table>
-  	<tr>
-  	  <th><%= t('.num') %></th>
-  	  <th><%= t('.test_name') %></th>
-  	  <th><%= t('.test_day') %></th>
-  	  <th><%= t('.result') %></th>
+    <tr>
+      <th><%= t('.test_name') %></th>
+      <th><%= t('.test_day') %></th>
+      <th><%= t('.result') %></th>
       <th><%= t('.grade') %></th>
-  	</tr>
-  	<%= render @user_results.includes(:user_answers) %>
+    </tr>
+    <%= render @user_results.includes(:user_answers) %>
   </table>
   <% unless @user_results.blank? %>
     <%= render 'exports/index', model: @user_results.klass, owner: @user %>

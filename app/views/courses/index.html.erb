@@ -3,6 +3,16 @@
 <h1><%= @category.name %></h1>
 <p id='category_description'><%= @category.description %></p>
 
+<div class='action-button'>
+  <% if can? :update, Category %>
+    <%= link_to t('.edit_category'), edit_category_path(@category), class: 'btn btn-primary' %>
+  <% end %>
+  <% if can? :create, Course %>
+    <%= link_to t('.new_course'), new_category_course_path(@category),
+                class: 'btn btn-success btn-primary' %>
+  <% end %>
+</div>
+
 <%= render @courses %>
 
 <% unless @courses.blank? %>
@@ -10,14 +20,3 @@
 <% end %>
 
 <%= will_paginate %>
-
-<div class='action-button'>
-  <%= link_to t('.back'), categories_path, class: 'btn btn-default' %>
-  <% if can? :update, Category %>
-    <%= link_to t('.edit_category'), edit_category_path(@category), class: 'btn btn-primary' %>
-  <% end %>
-  <% if can? :create, Course %>
-    <%= link_to t('.new_course'), new_category_course_path(@category),
-      class: 'btn btn-success btn-primary' %>
-  <% end %>
-</div>

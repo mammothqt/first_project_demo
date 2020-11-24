@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
 
     if @category.save
       flash[:success] = t('.category_create')
-	    redirect_to category_courses_path(@category)
+      redirect_to category_courses_path(@category)
     else
       render :new
     end
@@ -19,15 +19,15 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.newest.paginate(page: params[:page],
-      per_page: Settings.item.default_number)
+                                           per_page: Settings.item.default_number)
   end
 
   def update
     if @category.update(category_params)
-	    flash[:success] = t('.category_update')
-	    redirect_to category_courses_path(@category)
+      flash[:success] = t('.category_update')
+      redirect_to category_courses_path(@category)
 	  else
-	    render :edit
+      render :edit
     end
   end
 

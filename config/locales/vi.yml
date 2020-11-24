@@ -36,6 +36,12 @@ vi:
       description: 'Tiếng Anh cho mọi người'
       sign_up: 'Đăng ký ngay!'
       categories: 'Thể loại'
+    about:
+      about: 'Về chúng tôi'
+      about_us: 'Chuyên cung cấp các khóa học và bài kiểm tra Tiếng Anh miễn phí'
+    contact:
+      contact: 'Liên lạc'
+      find_us: 'Liên hệ với chúng tôi qua số điện thoại 0905.123456'
   layouts:
     footer:
       about: 'Về chúng tôi |'
@@ -44,7 +50,6 @@ vi:
       english: 'Tiếng Anh |'
       vietnamese: 'Tiếng Việt'
     header:
-      page_name: 'GOM TPV'
       home: 'Trang chủ'
       user: 'Tài khoản'
       signin: 'Đăng nhập'
@@ -55,6 +60,8 @@ vi:
       signout: 'Đăng xuất'
       user_info: 'Thông tin tài khoản'
       user_management: 'Quản lý tài khoản'
+    application:
+      title: 'Học tiếng anh cùng GMO'
   devise:
     registrations:
       new:
@@ -142,6 +149,7 @@ vi:
       not_found: '%{model} không tồn tại'
     new:
       back: 'Trở lại'
+      title: 'Tạo khóa học mới'
     show:
       back: 'Trở lại'
       edit_course: 'Chỉnh sửa khóa học'
@@ -160,6 +168,7 @@ vi:
       sure: 'Bạn có chắc chắn muốn xóa từ này?'
     new:
       back: 'Trở lại'
+      title: 'Tạo từ mới'
     form:
       word: 'Từ:'
       submit: 'Xác nhận'
@@ -197,6 +206,7 @@ vi:
       more: 'Bài kiểm tra khác'
       edit_test: 'Chỉnh sửa bài kiểm tra'
       not_found: '%{model} không tồn tại'
+      signin_to_test: 'Vui lòng đăng nhập để làm bài kiểm tra'
     test:
       delete: 'Xóa bài kiểm tra'
       sure: 'Bạn có chắc chắn xóa bài kiểm tra?'
@@ -331,8 +341,8 @@ vi:
           female: 'Nữ'
       user_result:
         statuses:
-          pass: 'Bạn đã đậu bài kiểm tra'
-          fail: 'Bạn đã rớt bài kiểm tra'
+          pass: 'Đậu bài kiểm tra'
+          fail: 'Rớt bài kiểm tra'
       userresult:
         itself: 'Kết quả thi'
     errors:
@@ -350,3 +360,11 @@ vi:
               invalid: 'đã hết hạn'
   unauthorized:
     default: 'Bạn không có quyền truy cập trang này'
+  mailer:
+    subject:
+      user_result: 'Chúc mừng %{name} đã vượt qua bài test %{test}'
+  user_mailer:
+    congrat_passed_user:
+      greeting: 'Xin chào %{name}'
+      congrat: 'Bạn đã vượt qua bài test %{test_name} với số điểm %{grade}'
+      another_test: 'Hãy tiếp tục với những bài test khác. Chúc bạn may mắn'

@@ -1,15 +1,15 @@
 <div class='intro'>
   <div class='row d-flex justify-content-center'>
     <% unless signed_in? %>
-  	  <div id='main-text-home'>
-	    <h1><%= t('.page_name') %></h1>
-	    <h2><%= t('.description') %></h2>
-	    <a>
-	  	  <%= link_to t('.sign_up'), new_user_registration_path, class: 'btn btn-success btn-primary' %>
-	    </a>
-	  </div>
-	<% else %>
-	  <%= render 'users/user_info', user: current_user %>
-	<% end %>
+      <div id='main-text-home'>
+        <h1><%= t('.page_name') %></h1>
+        <h2><%= t('.description') %></h2>
+        <a>
+          <%= link_to t('.sign_up'), new_user_registration_path, class: 'btn btn-success btn-primary' %>
+        </a>
+      </div>
+    <% else %>
+      <%= render 'users/user_info', user: current_user %>
+    <% end %>
   </div>
 </div>

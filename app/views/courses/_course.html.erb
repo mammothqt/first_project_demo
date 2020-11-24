@@ -4,7 +4,7 @@
     <p><%= course.description %></p>
     <% if can? :destroy, @course %>
       <%= link_to t('.delete'), category_course_path(@category, course), method: :delete,
-        data: { confirm: t('.sure') }, class: 'btn-danger btn-sm' %>
+                  data: { confirm: t('.sure') }, class: 'btn-danger btn-sm' %>
     <% end %>
   </div>
 </div>

@@ -5,7 +5,7 @@ class TestsController < ApplicationController
   def new
     @test = Test.new
     Settings.test.number_question.times {
-	    @question = @test.questions.build
+      @question = @test.questions.build
       Settings.question.number_answer.times {
         @answer = @question.answers.build
       }

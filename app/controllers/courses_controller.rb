@@ -9,7 +9,7 @@ class CoursesController < ApplicationController
 
   def index
     @courses = @category.courses.newest.paginate(page: params[:page],
-      per_page: Settings.item.default_number)
+                                                 per_page: Settings.item.default_number)
   end
 
   def show; end
@@ -22,7 +22,7 @@ class CoursesController < ApplicationController
       redirect_to category_course_path(@category, @course)
     else
       render :new
-	  end
+    end
   end
 
   def update

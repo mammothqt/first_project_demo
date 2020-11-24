@@ -1,9 +1,7 @@
 <%= form_for [@test, @user_result] do |f| %>
   <ol class='order-question'>
     <%= f.fields_for :user_answers do |u| %>
-      <h3>
-        <li><%= @test.questions[u.index].content %></li>
-	    </h3>
+      <h3><li><%= @test.questions[u.index].content %></li></h3>
 
       <%= u.collection_radio_buttons(:answer_id, ans_by_question(@test, u.index), :id, :content) do |b| %>
         <div class='display-answer'>

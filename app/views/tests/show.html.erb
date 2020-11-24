@@ -8,10 +8,12 @@
     <div class='test-new-button'>
       <%= link_to t('.start'), new_test_user_result_path(@test), class: 'btn btn-success btn-lg' %>
     </div>
+  <% else %>
+    <div class='signin-to-test'>
+      <h3><%= link_to t('.signin_to_test'), sign_in_path, class: 'btn btn-primary' %></h3>
+    </div>
   <% end %>
 </div>
-
-<%= link_to t('.more'), tests_path, class: 'btn btn-default' %>
 
 <% if can? :update, Test %>
   <%= link_to t('.edit_test'), edit_test_path(@test), class: 'btn btn-primary' %>

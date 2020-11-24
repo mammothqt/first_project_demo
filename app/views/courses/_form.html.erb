@@ -4,12 +4,14 @@
     <div class='col-md-6 col-md-offset-3 text-center'>
       <div class='field'>
         <%= form.label :name, t('.name') %>
-        <%= form.text_area :name, class: 'form-control text-center' %>
+        <%= form.text_area :name, class: 'form-control text-center',
+                            maxlength: Settings.course.name.max_length %>
       </div>
 
       <div class='field'>
         <%= form.label :description, t('.description') %>
-        <%= form.text_area :description, class: 'form-control text-center' %>
+        <%= form.text_area :description, class: 'form-control text-center',
+                            maxlength: Settings.course.description.max_length %>
       </div>
 
       <div class='actions', id='course-submit-button'>

@@ -8,32 +8,32 @@ class WordListsController < ApplicationController
   end
 
   def index
-	  @word_list = @course.word_lists.newest
+    @word_list = @course.word_lists.newest
   end
 
   def create
-	  @word_list = @course.word_lists.new(word_list_params)
+    @word_list = @course.word_lists.new(word_list_params)
 
-	  if @word_list.save
-	    flash[:success] = t('.word_create')
-	    redirect_to category_course_path(@course.category, @course)
-	  else
-	    render :new
-	  end
+    if @word_list.save
+      flash[:success] = t('.word_create')
+      redirect_to category_course_path(@course.category, @course)
+    else
+      render :new
+    end
   end
 
   def update
     if @word_list.update(word_list_params)
-	    flash[:success] = t('.word_update')
-	    redirect_to category_course_path(@course.category, @course)
- 	  else
-	    render :edit
-	  end
+      flash[:success] = t('.word_update')
+      redirect_to category_course_path(@course.category, @course)
+    else
+      render :edit
+    end
   end
 
   def destroy
-	  flash[:success] = t('.word_delete') if @word_list.destroy
-	  redirect_to category_course_path(@course.category, @course)
+    flash[:success] = t('.word_delete') if @word_list.destroy
+    redirect_to category_course_path(@course.category, @course)
   end
 
   private
@@ -44,11 +44,11 @@ class WordListsController < ApplicationController
   end
 
   def load_word_list
-	  @word_list = @course.word_lists.find_by(id: params[:id])
-	  redirect_to root_path if @word_list.blank?
+    @word_list = @course.word_lists.find_by(id: params[:id])
+    redirect_to root_path if @word_list.blank?
   end
 
   def word_list_params
-	  params.require(:word_list).permit(:word, :course_id)
+    params.require(:word_list).permit(:word, :course_id)
   end
 end

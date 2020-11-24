@@ -48,7 +48,7 @@ class UserResultsController < ApplicationController
   end
 
   def user_result_params
-	  params.require(:user_result).permit(:id, user_answers_attributes: [:id, :answer_id])
-                                        .merge(test_id: params[:test_id])
+    params.require(:user_result).permit(:id, user_answers_attributes: [:id, :answer_id])
+                                .merge(test_id: params[:test_id])
   end
 end

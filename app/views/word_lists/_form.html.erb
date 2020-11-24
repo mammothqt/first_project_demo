@@ -4,7 +4,8 @@
     <div class='col-md-6 col-md-offset-3 text-center'>
       <div class='field'>
         <%= form.label :word, t('.word') %>
-        <%= form.text_area :word, class: 'form-control text-center' %>
+        <%= form.text_area :word, class: 'form-control text-center',
+                            maxlength: Settings.word_list.word.max_length %>
       </div>
 
       <div class='actions' id='word-submit'>

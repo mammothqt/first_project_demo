@@ -1,6 +1,7 @@
 <h2><%= t('.edit_user') %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name),
+                       html: { method: :put }) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
   <div class='form-group'>
@@ -20,7 +21,7 @@
 
   <div class='form-group'>
     <%= f.label :sex, t('.gender') %>
-    <%= f.collection_radio_buttons(:sex, sex_attributes_for_select, :last, :first)do |b|%>
+    <%= f.collection_radio_buttons(:sex, sex_attributes_for_select, :last, :first) do |b| %>
       <div class='display-answer'>
         <%= b.radio_button %>
         <%= b.label %>

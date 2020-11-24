@@ -1,6 +1,14 @@
-<p id="notice"><%= notice %></p>
+<p id='notice'><%= notice %></p>
 
-<h1><%= t(".categories") %></h1>
+<h1><%= t('.categories') %></h1>
+
+<div class='category-container'>
+  <div class='category-new-button'>
+    <% if can? :create, Category %>
+      <%= link_to t('.new_category'), new_category_path, class: 'btn btn-success btn-primary' %>
+    <% end %>
+  </div>
+</div>
 
 <%= render @categories %>
 
@@ -9,11 +17,3 @@
 <% end %>
 
 <%= will_paginate %>
-
-<div class="category-container">
-  <div class="category-new-button">
-    <% if can? :create, Category %>
-      <%= link_to t(".new_category"), new_category_path, class: "btn btn-success btn-primary" %>
-    <% end %>
-  </div>
-</div>

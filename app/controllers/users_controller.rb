@@ -3,18 +3,18 @@ class UsersController < ApplicationController
   load_and_authorize_resource
 
   def index
-  	@users = User.newest.paginate(page: params[:page], per_page: Settings.item.default_number)
+    @users = User.newest.paginate(page: params[:page], per_page: Settings.item.default_number)
   end
 
   def destroy
-  	flash[:success] = t(".user_delete") if @user.destroy
+    flash[:success] = t(".user_delete") if @user.destroy
     redirect_to users_path
   end
 
   private
 
   def load_user
-  	@user = User.find_by(id: params[:id])
-  	redirect_to users_path if @user.blank?
+    @user = User.find_by(id: params[:id])
+    redirect_to users_path if @user.blank?
   end
 end
