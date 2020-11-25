@@ -89,6 +89,7 @@ en:
         sign_up: 'Sign up'
         forgot_password: 'Forgot password'
         not_receive_mail: 'Dont receive mail confirmation?'
+        sign_in_with: 'Sign in with %{provider}'
     confirmations:
       new:
         resend_email: 'Resend confirmation email'

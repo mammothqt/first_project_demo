@@ -89,6 +89,7 @@ vi:
         sign_up: 'Đăng ký'
         forgot_password: 'Quên mật khẩu'
         not_receive_mail: 'Không nhận được email?'
+        sign_in_with: 'Đăng nhập bằng %{provider}'
     confirmations:
       new:
         resend_email: 'Gửi lại email xác nhận'

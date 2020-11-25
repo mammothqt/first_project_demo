@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users, only: :omniauth_callbacks, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
   scope '(:locale)', locale: /en|vi/ do
     root 'main_pages#home'
     get 'main_pages/home'
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
     get '/about', to: 'main_pages#about'
     get '/contact', to: 'main_pages#contact'
 
-    devise_for :users, controllers: { confirmations: 'confirmations' }
+    devise_for :users, controllers: { confirmations: 'confirmations' }, skip: :omniauth_callbacks
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
     as :user do
       get 'sign_in' => 'devise/sessions#new'
