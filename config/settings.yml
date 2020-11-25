@@ -1,6 +1,5 @@
 item:
   default_number: 10
-  default_export: 10
 user_result:
   default_number: 20
   pass_grade: 2
@@ -26,10 +25,14 @@ test:
     max_length: 50
   description:
     max_length: 500
-  number_question: 2
+  number_question: 3
 user:
   full_name:
     max_length: 50
+  name:
+    max_length: 100
+  password:
+    default: '123456'
 word_list:
   word:
     max_length: 100

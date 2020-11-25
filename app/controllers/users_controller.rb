@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    flash[:success] = t(".user_delete") if @user.destroy
+    flash[:success] = t('.user_delete') if @user.destroy
     redirect_to users_path
   end
 

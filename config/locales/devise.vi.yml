@@ -8,32 +8,31 @@ vi:
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
     failure:
       already_authenticated: "Bạn đã đăng nhập."
-      inactive: "Your account is not activated yet."
+      inactive: "Tài khoản của bạn chưa được kích hoạt."
       invalid: "%{authentication_keys} hoặc mật khẩu không đúng."
       locked: "Tài khoản của bạn đã bị khóa."
       last_attempt: "Bạn còn 1 lần đăng nhập trước khi bị khóa tài khoản."
       not_found_in_database: "Tài khoản hoặc mật khẩu không chính xác"
       timeout: "Your session expired. Please sign in again to continue."
       unauthenticated: "Bạn cần đăng nhập hoặc đăng ký để tiếp tục"
-      unconfirmed: "You have to confirm your email address before continuing."
+      unconfirmed: "Bạn cần phải xác nhận tài khoản trước khi tiếp tục."
     omniauth_callbacks:
-      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
-      success: "Successfully authenticated from %{kind} account."
+      failure: "Không thể đăng nhập bằng tài khoản %{kind} vì \"%{reason}\"."
+      success: "Đăng nhập thành công bằng tài khoản %{kind}."
     passwords:
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
       send_instructions: "Bạn sẽ nhận được email hướng dẫn thay đổi mật khẩu trong ít phút."
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
       updated: "Mật khẩu của bạn đã được thay đổi."
-      updated_not_active: "Your password has been changed successfully."
+      updated_not_active: "Mật khẩu của bạn đã được thay đổi."
     registrations:
-      destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
       signed_up: "Bạn đã đăng nhập thành công"
       signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
       signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
       signed_up_but_unconfirmed: 'Một tin nhắn và link xác nhận đã được gửi đến email của bạn. Làm theo chỉ dẫn để tiếp tục'
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
+      update_needs_confirmation: "Bạn đã cập nhật thông tin thành công, nhưng chúng tôi cần xác minh địa chỉ email mới của bạn. Vui lòng kiểm tra mail và thực hiện theo hướng dẫn để xác nhận địa chỉ email mới của bạn"
       updated: "Tài khoản của bạn đã được cập nhật."
-      updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
+      updated_but_not_signed_in: "Tài khoản của bạn đã được cập nhật thành công, tuy nhiên vì mật khẩu đã bị thay đổi, vui lòng đăng nhập lại 1 lần nữa."
       edit:
         email: "Email"
         user_name: "Tài khoản"
@@ -44,21 +43,8 @@ vi:
         current_password: "Mật khẩu hiện tại: (Nhập mật khẩu hiện tại để xác nhận thay đổi)"
         update: "Cập nhật"
         edit_user: "Cập nhật thông tin"
+        full_name: 'Họ và tên'
     sessions:
       signed_in: "Bạn đã đăng nhập thành công."
       signed_out: "Bạn đã đăng xuất tài khoản."
       already_signed_out: "Bạn đã đăng xuất tài khoản."
-    unlocks:
-      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
-  errors:
-    messages:
-      already_confirmed: "was already confirmed, please try signing in"
-      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
-      not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
