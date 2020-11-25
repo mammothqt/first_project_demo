@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
 ruby '2.6.6'
 
@@ -27,7 +27,7 @@ gem 'draper'
 gem 'faker'
 gem 'roo'
 gem 'config'
-gem "figaro"
+gem 'figaro'
 gem 'sidekiq', '~> 5.2.8'
 # Use Redis adapter to run Action Cable in production
 gem 'redis'
@@ -39,6 +39,9 @@ gem 'redis'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

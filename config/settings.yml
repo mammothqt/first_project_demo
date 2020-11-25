@@ -30,6 +30,8 @@ test:
 user:
   full_name:
     max_length: 50
+  password:
+    default: '123456'
 word_list:
   word:
     max_length: 100
