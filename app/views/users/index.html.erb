@@ -6,10 +6,13 @@
   </aside>
   <table>
     <tr>
+      <th><%= t('.num') %></th>
       <th><%= t('.user_full_name') %></th>
       <th></th>
     </tr>
-    <%= render @users %>
+    <% @users.each_with_index do |user, index| %>
+      <%= render user, index: index %>
+    <% end %>
   </table>
   <%= will_paginate %>
   <%= render 'exports/index', model: @users.klass, owner: nil %>

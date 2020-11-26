@@ -1,4 +1,5 @@
 <tr>
+  <td><%= create_index(params[:page], index, Settings.item.default_number) %></td>
   <td><%= link_to user.full_name, user %></td>
   <td>
     <% if can? :destroy, User %>

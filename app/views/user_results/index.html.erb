@@ -6,12 +6,15 @@
   </aside>
   <table>
     <tr>
+      <th><%= t('.num') %></th>
       <th><%= t('.test_name') %></th>
       <th><%= t('.test_day') %></th>
       <th><%= t('.result') %></th>
       <th><%= t('.grade') %></th>
     </tr>
-    <%= render @user_results.includes(:user_answers) %>
+    <% @user_results.includes(:user_answers).each_with_index do |user_result, index| %>
+      <%= render user_result, index: index %>
+    <% end %>
   </table>
   <% unless @user_results.blank? %>
     <%= render 'exports/index', model: @user_results.klass, owner: @user %>
