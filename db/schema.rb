@@ -112,6 +112,4 @@ ActiveRecord::Schema.define(version: 2020_11_25_143232) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
-
-  add_foreign_key "identities", "users"
 end

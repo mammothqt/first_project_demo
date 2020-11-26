@@ -1,4 +1,5 @@
 <tr>
+  <td><%= create_index(params[:page], index, Settings.item.default_number) %></td>
   <td><%= link_to user_result.test_name, user_user_result_path(@user, user_result) %></td>
   <td><%= format_date_slash(user_result.created_at) %></td>
   <td><%= result_ratio(user_result.number_correct, user_result.test_number_question) %></td>

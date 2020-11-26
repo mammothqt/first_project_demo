@@ -25,7 +25,10 @@
       <th><%= t('.correct_answer') %></th>
       <th><%= t('.result') %></th>
     </tr>
-    <%= render @user_result.user_answers.includes(answer: :question) %>
+    <% @user_result.user_answers.includes(answer: :question)
+                                .each_with_index do |user_answer, index| %>
+      <%= render user_answer, index: index %>
+    <% end %>
   </table>
 </div>
 

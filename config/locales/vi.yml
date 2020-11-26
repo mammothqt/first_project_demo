@@ -274,7 +274,7 @@ vi:
         reset_password: 'Thay đổi mật khẩu'
   exports:
     index:
-      link_export: 'Xuất file pdf'
+      link_export: 'Xuất file csv'
       not_found: '%{model} không tồn tại'
       Category: 'Thể_loại_%{date}.csv'
       Course: 'Khóa_học_%{date}.csv'

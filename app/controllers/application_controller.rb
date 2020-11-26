@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     update_attrs = [:email, :age, :sex, :full_name]
-    signup_attrs = [:email, :age, :full_name]
+    signup_attrs = [:email, :full_name]
     devise_parameter_sanitizer.permit(:account_update, keys: update_attrs)
     devise_parameter_sanitizer.permit(:sign_up, keys: signup_attrs)
   end

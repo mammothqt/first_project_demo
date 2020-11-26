@@ -1,5 +1,5 @@
 <tr>
-  <td><span class='mycount'></span></td>
+  <td><%= create_index(params[:page], index, Settings.item.default_number) %></td>
   <td><%= user_answer.question_content %></td>
   <td><%= user_answer.answer_content %></td>
   <td><%= right_answer(user_answer) %></td>
